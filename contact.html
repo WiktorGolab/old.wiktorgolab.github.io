@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="translate" data-translate="pageTitleContact"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Outfit:wght@100..900&family=Tiny5&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" type="image/png" href="img/favico.png">
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen"></div>
+    <div class="loading-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- Darkening -->
+    <div id="darkening"></div>
+
+    <!-- Navigator -->
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="translate" data-translate="home"></a></li>
+                <li><a href="about.html" class="translate" data-translate="about"></a></li>
+                <li><a href="projects.html" class="translate" data-translate="projects"></a></li>
+                <li><a href="experience.html" class="translate" data-translate="experience"></a></li>
+                <li><a href="#" class="translate active-nav" data-translate="contact"></a></li>
+            </ul>
+            <div class="language-switcher">
+                <button onclick="setLanguage('pl'); setPlaceholders(); document.getElementById('responseMessage').innerText = '';" class="lang-button" title="Przełącz język strony na polski.">
+                    <div class="lang-content">
+                        <img src="img/pl_lang.png" draggable="false" alt="Polish Flag">PL
+                    </div>
+                </button>
+                <button onclick="setLanguage('en'); setPlaceholders(); document.getElementById('responseMessage').innerText = '';" class="lang-button" title="Change website language to english.">
+                    <div class="lang-content">
+                        <img src="img/eng_lang.png" draggable="false" alt="English Flag">EN
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="body2"></div>
+
+    <div>
+        <p class="title translate" data-translate="contact" style="margin-top: 100px;"></p>
+    </div>
+
+    <div class="content">
+        <main>
+            <div class="contactContent">
+                <div class="xp-window">
+                    <div class="xp-title-bar">
+                        <div class="xp-title-bar-text">
+                            <img src="img/xpcontact.png" class="cursor-default" style="transform: scale(0.9); cursor: url('/img/cursor.cur'), auto !important;" draggable="false">
+                        <p class="translate cursor-default" data-translate="contactXpWindowTitle" style="cursor: url('/img/cursor.cur'), auto !important;"></p>
+                        </div>
+                        <div class="buttons">
+                            <div class="button" style="font-size: large; user-select: none;">_</div>
+                        </div>
+                    </div>
+                                    
+                    <div class="xp-content">
+                        <p class="translate" data-translate="contactXpWindowText1" style="font-size: 25px; margin-bottom: 15px; font-weight: 500; letter-spacing: -1px; line-height: 1;"></p>
+                        <p class="translate" data-translate="contactXpWindowText2" style="font-size: 25px; margin-bottom: 15px; font-weight: 500; letter-spacing: -1px; line-height: 1;"></p>
+                        <div>
+                            <p class="translate" data-translate="contactXpWindowText3" style="font-size: 25px; display: inline; margin: 0; font-weight: 500; letter-spacing: -1px; line-height: 1;"></p>
+                            <img src="img/emote.gif" draggable="false" style="display: inline; transform: translate(2px, 3px) scale(1.3);">
+                        </div>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <label for="name" class="translate" data-translate="contactXpWindowName"></label>
+                            <input type="text" style="cursor: url('/img/cursor2.cur'), auto;" id="name" name="name" required>
+                            
+                            <label for="email" class="translate" data-translate="contactXpWindowEmail"></label>
+                            <input type="email" style="cursor: url('/img/cursor2.cur'), auto;" id="email" name="email" required>
+                            
+                            <label for="message" class="translate" data-translate="contactXpWindowMessageContent"></label>
+                            <textarea id="message" style="cursor: url('/img/cursor2.cur'), auto;" name="message" rows="4" required></textarea>
+                            
+                            <div style="display: flex; justify-content: center;">
+                                <button type="button" onclick="sendEmail()" class="cursor-default" style="cursor: url('/img/cursor3.cur'), auto;">OK</button>
+                            </div>
+                        </form>
+                    
+                        <!-- Dodaj element do wyświetlenia komunikatu zwrotnego -->
+                        <p id="responseMessage" style="margin-top: 10px; font-size: 22px; font-weight: 500; letter-spacing: -1px; line-height: 1; text-align: center;"></p>
+                    </div>
+                </div>
+
+                <img src="img/rover1.png" class="cursor-default" draggable="false" id="rover1" alt="Rover" title="Rover">
+
+                <div class="xp-deco-window1" style="right: 1100px; top: 170px; height: 600px; width: 700px;">
+                    <div class="xp-deco-title-bar cursor-default" style="line-height: 0; color: rgba(255, 255, 255, 0.486);"></div>
+                </div>
+                <div class="xp-deco-window2" style="left: 730px; top: 85px; height: 600px; width: 700px;">
+                    <div class="xp-deco-title-bar cursor-default" style="line-height: 0; color: rgba(255, 255, 255, 0.486);">... ... ......</div>
+                </div>
+
+                <div class="xp-deco-window" style="left: 120px; top: 450px; height: 300px; width: 400px;">
+                    <div class="xp-deco-title-bar cursor-default" style="line-height: 0; color: rgba(255, 255, 255, 0.486);">.. ... ... ...</div>
+                </div>
+                <div class="xp-deco-window" style="left: 30px; top: 300px; height: 200px; width: 300px; background-color: #d1d1d18a;">
+                    <div class="xp-deco-title-bar cursor-default" style="line-height: 0; color: rgba(255, 255, 255, 0.486); background-color: #0045bb5b;">...... ... ...</div>
+                </div>
+
+                <div class="xp-deco-window" style="right: 30px; top: 200px; width: 500px;">
+                    <div class="xp-deco-title-bar cursor-default" style="line-height: 0; color: rgba(255, 255, 255, 0.486);">... ...... ...</div>
+                </div>
+                <div class="xp-deco-window" style="right: 40px; top: 350px; height: 300px; width: 350px; background-color: #d1d1d18a;">
+                    <div class="xp-deco-title-bar cursor-default" style="line-height: 0; color: rgba(255, 255, 255, 0.486); background-color: #0045bb5b;">... ... ......</div>
+                </div>
+            </div>
+
+            <div class="closedWindowContent">
+                <div class="xp-window"  style="top: 0;">
+                    <div class="xp-title-bar">
+                        <div class="xp-title-bar-text">
+                            <img src="img/xpalert.png" class="cursor-default" style="transform: scale(0.9) scaleY(0.8); cursor: url('/img/cursor.cur'), auto !important;">
+                        <p class="translate cursor-default" data-translate="contactXpWindowAlertTitle" style="cursor: url('/img/cursor.cur'), auto !important;"></p>
+                        </div>
+                        <div class="buttons">
+                            <div class="closeButton"><p style="font-size: 45px; line-height: 0; transform: translateY(-4.5px) scaleX(1.4); user-select: none;">x</p></div>
+                        </div>
+                    </div>
+                                    
+                    <div class="xp-content">
+                        <img src="img/rover2.png" class="cursor-default" draggable="false" id="rover2" alt="Rover" title="Rover!">
+                        <p class="translate" data-translate="contactXpWindowAlertText1" style="font-size: 25px; margin-bottom: 15px; font-weight: 500; letter-spacing: -1px; line-height: 1; transform: translateY(-15px);"></p>
+                        <a class="openWindow translate" data-translate="contactXpWindowAlertText2" style="font-size: 25px; margin-bottom: 15px; font-weight: 500; letter-spacing: -1px; line-height: 1; text-decoration: underline; cursor: url('/img/cursor3.cur'), auto;"></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer HTML -->
+    <footer style="margin-top: 30px;">
+        <div class="footerimg">
+            <img src="img/footerimage.png" alt="Footer Image" class="footer-image cursor-default" draggable="false">
+            <img src="img/footerbirds.gif" alt="Footer Birds" draggable="false" class="footer-birds animate">
+        </div>
+        <div class="footer-content">
+            <!-- Imię i nazwisko oraz social media -->
+            <div class="name-and-links">
+                <p class="name cursor-default" title="Tego gościa nie skopiujesz">Wiktor Gołąb</p>
+                <div class="social-links">
+                    <a href="https://github.com/WiktorGolab" target="_blank" title="Github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wiktorgolab/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+                
+            <!-- Linki nawigacyjne -->
+            <div class="footer-nav">
+                <a href="index.html" class="translate" data-translate="home"></a>
+                <a href="about.html" class="translate" data-translate="about"></a>
+                <a href="projects.html" class="translate" data-translate="projects"></a>
+                <a href="experience.html" class="translate" data-translate="experience"></a>
+                <a href="#" class="translate" data-translate="contact"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/language.js" defer></script>
+    <script src="js/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyAV9lU2VfGgnvsICCb-gJgwVsYKTjkpg8Y",
+            authDomain: "portfolio-9d547.firebaseapp.com",
+            projectId: "portfolio-9d547",
+            storageBucket: "portfolio-9d547.firebasestorage.app",
+            messagingSenderId: "674530815390",
+            appId: "1:674530815390:web:69c6b586792de56c81fa8f",
+            measurementId: "G-QZYKHJGXGW"
+        };
+    
+        // Inicjalizacja Firebase i Firestore
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+    
+        // Odwołanie do dokumentu o ID 'C86OQONgCDdoAbip4nre' w kolekcji 'keys'
+        const apiKeyDoc = doc(db, "keys", "C86OQONgCDdoAbip4nre");
+    
+        async function fetchApiKeys() {
+            const docSnap = await getDoc(apiKeyDoc);
+            if (docSnap.exists()) {
+                const EmailjsAPI = docSnap.data().EmailjsAPI;
+                const EmailjsTemplate = docSnap.data().EmailjsTemplate;
+                const EmailjsUserID = docSnap.data().EmailjsUserID;
+
+                if (EmailjsUserID) {
+                    // Inicjalizowanie emailjs
+                    emailjs.init(EmailjsUserID);
+
+                    // Udostępnienie danych globalnie
+                    window.EmailjsAPI = EmailjsAPI;
+                    window.EmailjsTemplate = EmailjsTemplate;
+                } else {
+                    console.error("Brak EmailjsUserID w dokumencie Firestore!");
+                }
+            } else {
+                console.log("Dokument nie istnieje!");
+            }
+        }
+    
+        // Uruchomienie funkcji po załadowaniu strony
+        window.onload = () => {
+            fetchApiKeys();
+            
+            const splashScreen = document.getElementById("splash-screen");
+            const loadingDots = document.querySelector(".loading-dots");
+
+            // Dodaj klasę "hidden" dla efektu zanikania
+            splashScreen.style.opacity = 0;
+            loadingDots.style.opacity = 0;
+
+            splashScreen.style.pointerEvents = "none";
+            loadingDots.style.pointerEvents = "none";
+
+            // Po zakończeniu animacji ukryj splash screen i pokaż treść
+            splashScreen.addEventListener("transitionend", function() {
+                splashScreen.style.display = "none"; // Ukryj splash screen
+                loadingDots.style.display = "none"; // Ukryj kropki ładowania
+            });
+        };
+    </script>
+    <script>
+        // Funkcja do ustawienia placeholderów
+        function setPlaceholders() {
+            const lang = localStorage.getItem('language') || 'pl';
+    
+            document.getElementById('name').placeholder = translations[lang].contactFormPlaceholderName;
+            document.getElementById('email').placeholder = translations[lang].contactFormPlaceholderEmail;
+            document.getElementById('message').placeholder = translations[lang].contactFormPlaceholderMessage;
+        }
+    
+        // Funkcja do wysyłania e-maila
+        function sendEmail() {
+            const lang = localStorage.getItem('language') || 'pl';
+    
+            // Pobieranie wartości z formularza
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            // Walidacja danych przed wysłaniem
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+            if (name === "" || email === "" || message === "") {
+                document.getElementById("responseMessage").innerText = translations[lang].contactFormNoValues;
+                responseMessage.style.color = "red";
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                document.getElementById("responseMessage").innerText = translations[lang].contactFormInvalidEmail;
+                responseMessage.style.color = "red";
+                return;
+            }
+    
+            // Wysyłanie e-maila za pomocą EmailJS
+            emailjs.send(window.EmailjsAPI, window.EmailjsTemplate, {
+                name: name,
+                email: email,
+                message: message
+            })
+            .then((response) => {
+                document.getElementById("responseMessage").innerText = translations[lang].contactFormSuccess;
+                responseMessage.style.color = "black";
+            }, (error) => {
+                document.getElementById("responseMessage").innerText = translations[lang].contactFormError;
+                responseMessage.style.color = "red";
+                console.error(error);
+            });
+        }
+    
+        // Dodanie listenera do załadowania formularza
+        document.addEventListener("DOMContentLoaded", () => {
+            setPlaceholders();
+        });
+    </script>
+</body>
+</html>

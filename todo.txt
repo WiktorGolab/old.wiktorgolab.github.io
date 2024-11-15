@@ -1,4 +1,4 @@
-- Strona główna: Skill card, Chatbot (Ogarnąć klucz API od OpenAI i zaimplementować chat)
+- Strona główna: Chatbot (Ogarnąć klucz API od OpenAI i zaimplementować chat)
 
 - O mnie
 
