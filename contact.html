@@ -28,7 +28,13 @@
     </div>
 
     <!-- Darkening -->
-    <div id="darkening"></div>
+    <div id="darkening">
+        <div class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
 
     <!-- Navigator -->
     <header>
@@ -269,32 +275,53 @@
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
     
+            document.querySelectorAll('.loading-dots').forEach(function(dot) {
+                dot.style.display = "flex";
+            });
+            document.getElementById('darkening').style.opacity = 1;
+
             // Walidacja danych przed wysłaniem
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     
             if (name === "" || email === "" || message === "") {
                 document.getElementById("responseMessage").innerText = translations[lang].contactFormNoValues;
                 responseMessage.style.color = "red";
+                document.querySelectorAll('.loading-dots').forEach(function(dot) {
+                    dot.style.display = "none";
+                });
+                document.getElementById('darkening').style.opacity = 0;
                 return;
             }
             if (!emailRegex.test(email)) {
                 document.getElementById("responseMessage").innerText = translations[lang].contactFormInvalidEmail;
                 responseMessage.style.color = "red";
+                document.querySelectorAll('.loading-dots').forEach(function(dot) {
+                    dot.style.display = "none";
+                });
+                document.getElementById('darkening').style.opacity = 0;
                 return;
             }
     
             // Wysyłanie e-maila za pomocą EmailJS
-            emailjs.send(window.EmailjsAPI, window.EmailjsTemplate, {
+            emailjs.send("window.EmailjsAPI", window.EmailjsTemplate, {
                 name: name,
                 email: email,
                 message: message
             })
             .then((response) => {
                 document.getElementById("responseMessage").innerText = translations[lang].contactFormSuccess;
-                responseMessage.style.color = "black";
+                responseMessage.style.color = "green";
+                document.querySelectorAll('.loading-dots').forEach(function(dot) {
+                    dot.style.display = "none";
+                });
+                document.getElementById('darkening').style.opacity = 0;
             }, (error) => {
                 document.getElementById("responseMessage").innerText = translations[lang].contactFormError;
                 responseMessage.style.color = "red";
+                document.querySelectorAll('.loading-dots').forEach(function(dot) {
+                    dot.style.display = "none";
+                });
+                document.getElementById('darkening').style.opacity = 0;
                 console.error(error);
             });
         }

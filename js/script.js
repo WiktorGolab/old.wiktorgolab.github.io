@@ -49,6 +49,9 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active'); // Przełącza klasę 'active'
 
+    document.querySelectorAll('.loading-dots').forEach(function(dot) {
+        dot.style.display = "none";
+    });
     const darkening = document.getElementById('darkening');
     if (darkening.style.opacity == "1") {
         darkening.style.opacity = "0";
