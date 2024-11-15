@@ -1,0 +1,217 @@
+/* Linki i przyciski */
+a.btn {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center; /* Wyśrodkowanie w osi pionowej */
+    justify-content: center; /* Wyśrodkowanie w osi poziomej */
+    gap: 6px;
+    text-decoration: none;
+}
+
+a.btn:hover {
+    background-color: #555;
+}
+
+/* Nagłówek i nawigacja */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.6;
+    position: relative;
+    display: inline-block; /* Zapewnia, że transformacja skaluje cały link */
+    transform: scale(1); /* Ustawienie początkowej skali */
+    transition: color 0.3s ease-out, font-size 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out; /* Przejście dla koloru i transformacji */
+}
+
+.active-nav {
+    border-radius: 15px;
+    border-bottom: 3px #ebebeb solid;
+    background-color: #fafafa;
+    color: #4d4d4d !important;
+}
+
+header nav ul li a:hover {
+    font-size: 20px; /* Powiększenie przy najechaniu */
+    background-color: #faf1f1;
+    transform: translateY(-2px);
+}
+
+header nav ul li:not(:last-child)::after {
+    content: ""; /* Pseudoelement pustego kontentu */
+    display: inline-block;
+    width: 3px; /* Szerokość separatora */
+    height: 50px; /* Wysokość separatora */
+    background-color: #ee8894; /* Szary kolor separatora */
+    position: absolute;
+    right: -18px; /* Przesunięcie na prawo */
+    top: 50%; /* Wyśrodkowanie separatora */
+    transform: translateY(-50%); /* Wyrównanie w pionie */
+}
+
+/* Responsywność */
+@media (max-width: 828px) {
+    header nav {
+        flex-direction: column; /* Umożliwia kolumnowe rozmieszczenie */
+        align-items: center; /* Wyśrodkowuje elementy w pionie */
+    }
+
+    header nav ul li {
+        display: block; /* Każdy link jako blok */
+    }
+
+    header nav ul li:not(:last-child)::after {
+        opacity: 0; /* Usunięcie efektu po ostatnim elemencie */
+    }
+
+    .nav-links {
+        justify-content: center; /* Centruje linki nawigacyjne */
+        gap: 15px;
+    }
+
+    .language-switcher {
+        display: flex; /* Umożliwia elastyczne rozmieszczenie przycisków */
+        justify-content: center; /* Wyśrodkowuje przyciski językowe */
+        align-items: center; /* Wyśrodkowuje je w pionie */
+    }
+
+    .nav-links.active {
+        display: flex; /* Pokazuje menu, gdy klasa 'active' jest dodana */
+        max-height: 500px;
+    }
+}
+
+@media (min-width: 829px) {
+    .nav-links {
+        display: block !important; /* Pokazuje linki w trybie desktopowym */
+    }
+
+    .menu-toggle {
+        display: none; /* Ukrywa przycisk hamburgera w trybie desktopowym */
+    }
+}
+
+.language-switcher {
+    display: flex;
+    gap: 10px; /* Odstęp między przyciskami */
+    position: relative;
+}
+
+.lang-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 40px;
+    gap: 6px;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.lang-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+/* Wyrównanie zawartości i odstęp */
+.lang-content {
+    display: flex;
+    align-items: center; /* Wyrównanie obrazka i tekstu w pionie */
+    gap: 10px; /* Odstęp między obrazkiem a tekstem */
+}
+
+.lang-content img {
+    height: 20px; /* Można dostosować wysokość obrazka */
+    width: auto;
+    user-select: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Wyśrodkowuje całą nawigację */
+    align-items: center;
+    gap: 20px; /* Odstęp między linkami a przełącznikiem języka */
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów na mniejszych ekranach */
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none; /* Usunięcie kropek listy */
+    gap: 20px; /* Odstęp między linkami */
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-wrap: wrap;
+    opacity: 1;
+    transition: opacity 0.4s ease-out; /* Dodaje płynne przejście */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+.menu-toggle {
+    background-color: #ffffff !important;
+    position: absolute;
+    border: none;
+    right: 10px;
+    bottom: 15px;
+    width: 52px;
+    height: 52px;
+    font-size: 24px; /* Rozmiar przycisku hamburgera */
+    cursor: pointer;
+    color: #000000; /* Kolor przycisku */
+    border-radius: 50%;
+}

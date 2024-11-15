@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="translate" data-translate="pageTitleProjects"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" type="image/png" href="img/favico.png">
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen"></div>
+    <div class="loading-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- Darkening -->
+    <div id="darkening"></div>
+
+    <!-- Navigator -->
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="translate" data-translate="home"></a></li>
+                <li><a href="about.html" class="translate" data-translate="about"></a></li>
+                <li><a href="#" class="translate active-nav" data-translate="projects"></a></li>
+                <li><a href="experience.html"  class="translate" data-translate="experience"></a></li>
+                <li><a href="contact.html"  class="translate" data-translate="contact"></a></li>
+            </ul>
+            <div class="language-switcher">
+                <button onclick="setLanguage('pl')" class="lang-button" title="Przełącz język strony na polski.">
+                    <div class="lang-content">
+                        <img src="img/pl_lang.png" draggable="false" alt="Polish Flag">PL
+                    </div>
+                </button>
+                <button onclick="setLanguage('en')" class="lang-button" title="Change website language to english.">
+                    <div class="lang-content">
+                        <img src="img/eng_lang.png" draggable="false" alt="English Flag">EN
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="body2"></div>
+        <div class="content">
+        <main>
+            <p class="title translate" data-translate="myProjects" style="font-size: 5vh;"></p>
+            <section class="projects" style="border: 5px solid #f5f5f5; width: 100%; position: relative;">
+                <div style="position: relative; width: 100%; height: 10px;">
+                    <p class="translate cursor-default" data-translate="projectsWindowTitle" id="projectsWindowTitle" style="color: #dddddd; font-weight: 800; transform: translateY(-5px);"></p>
+                    <div class="decoBlock" style="right: 5px; top: 0; transform: translateY(-5px);"></div>
+                    <div class="decoBlock" style="right: 45px; top: 0; transform: translateY(-5px);"></div>
+                    <div class="decoBlock" style="right: 85px; top: 0; transform: translateY(-5px);"></div>
+                </div>
+
+                <article>
+                    <a href="https://eksero24.pl/" target="_blank" class="projectWebsiteImageTitle" style="text-decoration: none; color: black;"><img src="img/gallery/pic5.png" class="zoom" style="border-radius: 10px;" alt="eksero24" draggable="false">
+                    <h2>EKSERO24.PL</h2></a>
+                    <p style="margin-bottom: 10px;" class="translate" data-translate="m3group"></p>
+                    <p style="text-align: left; font-weight: 600;" class="translate" data-translate="usedTechnologies"></p>
+                    <ul style="text-align: left; margin-bottom: 30px;">
+                        <li style="color: #585858;">WordPress (Elementor, WooCommerce, HTML, CSS, JavaScript)</li>
+                    </ul>
+                    <a href="https://eksero24.pl/" target="_blank" class="web-button"><img src="img/web.png" style="border: 0; box-shadow: 0 0 0; height: 100%;"><p class="translate" data-translate="webPage"></p></a>
+                </article>
+
+                <article>
+                    <a href="https://wodnasluzbaratownicza.pl/" target="_blank" class="projectWebsiteImageTitle" style="text-decoration: none; color: black;"><img src="img/gallery/pic4.png" class="zoom" style="border-radius: 10px;" alt="Wodna Służba Ratownicza" draggable="false">
+                    <h2>Wodna Służba Ratownicza</h2></a>
+                    <p style="margin-bottom: 10px;" class="translate" data-translate="m3group"></p>
+                    <p style="text-align: left; font-weight: 600;" class="translate" data-translate="usedTechnologies"></p>
+                    <ul style="text-align: left; margin-bottom: 30px;">
+                        <li style="color: #585858;">WordPress (WP Bakery, HTML, CSS)</li>
+                    </ul>
+                    <a href="https://wodnasluzbaratownicza.pl/" target="_blank" class="web-button"><img src="img/web.png" style="border: 0; box-shadow: 0 0 0; height: 100%;"><p class="translate" data-translate="webPage"></p></a>
+                </article>
+
+                <article>
+                    <a href="https://educzar.pl/" target="_blank" class="projectWebsiteImageTitle" style="text-decoration: none; color: black;"><img src="img/gallery/pic3.png" class="zoom" style="border-radius: 10px;" alt="EDU-CZAR" draggable="false">
+                    <h2>EDU-CZAR</h2></a>
+                    <p style="margin-bottom: 10px;" class="translate" data-translate="educzar"></p>
+                    <p style="text-align: left; font-weight: 600;" class="translate" data-translate="usedTechnologies"></p>
+                    <ul style="text-align: left; margin-bottom: 30px;">
+                        <li style="color: #585858;">WordPress</li>
+                    </ul>
+                    <a href="https://educzar.pl/" target="_blank" class="web-button"><img src="img/web.png" style="border: 0; box-shadow: 0 0 0; height: 100%;"><p class="translate" data-translate="webPage"></p></a>
+                </article>
+
+                <article>
+                    <a href="https://github.com/WiktorGolab/PONG" target="_blank" class="projectGithubImageTitle" style="text-decoration: none; color: black;"><img src="img/gallery/pic1.png" class="zoom" style="border-radius: 10px;" alt="PONG" draggable="false">
+                    <h2>PONG</h2></a>
+                    <p style="margin-bottom: 10px;" class="translate" data-translate="pong"></p>
+                    <p style="text-align: left; font-weight: 600;" class="translate" data-translate="usedTechnologies"></p>
+                    <ul style="text-align: left; margin-bottom: 30px;">
+                        <li style="color: #585858;">HTML, CSS, JavaScript, Node.js</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; margin-top: auto; gap: 7px;">
+                        <a href="https://github.com/WiktorGolab/PONG" target="_blank" class="github-button"><img src="img/github.png" style="border: 0; box-shadow: 0 0 0; height: 100%;"><p class="translate" data-translate="sourceCode"></p></a>
+                        <a href="https://wiktorgolab.github.io/PONG/index.html" target="_blank" class="github-pages-button"><img src="img/link.png" style="border: 0; box-shadow: 0 0 0;"></a>
+                    </div>
+                </article>
+
+                <article>
+                    <a href="https://github.com/WiktorGolab/Kalkulator-naukowy" target="_blank" class="projectGithubImageTitle" style="text-decoration: none; color: black;"><img src="img/gallery/pic2.png" class="zoom" style="border-radius: 10px;" alt="Kalkulator naukowy">
+                    <h2 class="translate" data-translate="calculatorTitle"></h2></a>
+                    <p style="margin-bottom: 10px;" class="translate" data-translate="calculator"></p>
+                    <p style="text-align: left; font-weight: 600;" class="translate" data-translate="usedTechnologies"></p>
+                    <ul style="text-align: left; margin-bottom: 30px;">
+                        <li style="color: #585858;">HTML, CSS, JavaScript</li>
+                    </ul>
+                    <div style="display: flex; justify-content: space-between; margin-top: auto; gap: 7px;">
+                        <a href="https://github.com/WiktorGolab/Kalkulator-naukowy" target="_blank" class="github-button"><img src="img/github.png" style="border: 0; box-shadow: 0 0 0; height: 100%;"><p class="translate" data-translate="sourceCode"></p></a>
+                        <a href="https://wiktorgolab.github.io/Kalkulator-naukowy/" target="_blank" class="github-pages-button"><img src="img/link.png" style="border: 0; box-shadow: 0 0 0;"></a>
+                    </div>
+                </article>
+
+                <article>
+                    <a href="index.html" target="_blank" class="projectWebsiteImageTitle" style="text-decoration: none; color: black;"><img src="img/gallery/pic6.png" class="zoom" style="border-radius: 10px;" alt="Portfolio">
+                    <h2 class="translate" data-translate="portfolioTitle">Strona z portfolio</h2></a>
+                    <p style="margin-bottom: 10px;" class="translate" data-translate="portfolio">Przyjemna dla oka, responsywna i intuicyjna.</p>
+                    <p style="text-align: left; font-weight: 600;" class="translate" data-translate="usedTechnologies"></p>
+                    <ul style="text-align: left; margin-bottom: 30px;">
+                        <li style="color: #585858;">HTML, CSS, JavaScript</li>
+                    </ul>
+                    <a href="index.html" target="_blank" class="web-button"><img src="img/web.png" style="border: 0; box-shadow: 0 0 0; height: 100%;"><p class="translate" data-translate="webPage"></p></a>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer HTML -->
+    <footer style="margin-top: 50px;">
+        <div class="footerimg">
+            <img src="img/footerimage.png" alt="Footer Image" class="footer-image cursor-default" draggable="false">
+            <img src="img/footerbirds.gif" alt="Footer Birds" draggable="false" class="footer-birds animate">
+        </div>
+        <div class="footer-content">
+            <!-- Imię i nazwisko oraz social media -->
+            <div class="name-and-links">
+                <p class="name cursor-default" title="Tego gościa nie skopiujesz">Wiktor Gołąb</p>
+                <div class="social-links">
+                    <a href="https://github.com/WiktorGolab" target="_blank" title="Github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wiktorgolab/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+                
+            <!-- Linki nawigacyjne -->
+            <div class="footer-nav">
+                <a href="index.html" class="translate" data-translate="home"></a>
+                <a href="about.html" class="translate" data-translate="about"></a>
+                <a href="#" class="translate" data-translate="projects"></a>
+                <a href="experience.html" class="translate" data-translate="experience"></a>
+                <a href="contact.html" class="translate" data-translate="contact"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+
+    <script>
+        window.addEventListener('resize', function() {
+            updateTranslateAttribute();
+        });
+        window.addEventListener('load', updateTranslateAttribute);
+    </script>
+</body>
+</html>

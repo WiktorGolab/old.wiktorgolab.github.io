@@ -1,0 +1,85 @@
+/* Stylizacja kontenera chatbota */
+.chatbot-container {
+    width: 900px;
+    max-width: 100%;
+    margin: 50px auto;
+    top: 30px;
+    right: 100px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Cień dla karty */
+    transform: translateY(-80vw);
+    transition: transform 0.3s ease;
+}
+
+/* Okno czatu z określoną wysokością 600px i suwakami */
+.chat-window {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #007bff;
+    border-bottom: 3px solid #0069da;
+    border-radius: 10px;
+    height: 500px;  /* Stała wysokość okna czatu */
+    overflow-y: auto;  /* Pokaż suwak pionowy, gdy wiadomości przekroczą wysokość */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pole wejściowe */
+.input-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tekst wpisywany przez użytkownika */
+#user-input {
+    width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    resize: none;
+}
+
+/* Przycisk wysyłania */
+#send-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Outfit';
+    letter-spacing: 0.5px;
+}
+
+/* Styl wiadomości użytkownika */
+.user-message {
+    align-self: flex-end;
+    background-color: #a8a8a8;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* Styl wiadomości chatbota */
+.bot-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+}
