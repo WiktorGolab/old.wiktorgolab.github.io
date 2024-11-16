@@ -1,5 +1,5 @@
 # TO-DO LIST:
-- Strona główna: Chatbot (Ogarnąć klucz API od OpenAI i zaimplementować chat)
+- Strona główna: Chatbot (Ogarnąć klucz API od OpenAI/Huggingface i zaimplementować chat)
 - O mnie
 - Doświadczenie
 - Strona główna
