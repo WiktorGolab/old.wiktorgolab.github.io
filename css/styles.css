@@ -203,3 +203,7 @@ li {
     cursor: default;
     user-select: none;
 }
+
+.shadowedImage {
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.7));
+}

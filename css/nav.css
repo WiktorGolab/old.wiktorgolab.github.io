@@ -82,7 +82,7 @@ header nav ul li:not(:last-child)::after {
 }
 
 /* Responsywność */
-@media (max-width: 828px) {
+@media (max-width: 846px) {
     header nav {
         flex-direction: column; /* Umożliwia kolumnowe rozmieszczenie */
         align-items: center; /* Wyśrodkowuje elementy w pionie */
@@ -113,7 +113,7 @@ header nav ul li:not(:last-child)::after {
     }
 }
 
-@media (min-width: 829px) {
+@media (min-width: 846px) {
     .nav-links {
         display: block !important; /* Pokazuje linki w trybie desktopowym */
     }

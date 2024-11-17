@@ -59,22 +59,3 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
         darkening.style.opacity = "1";
     }
 });
-
-function calculateAge() {
-    const birthDate = new Date(2003, 5, 9); // Miesiące są indeksowane od 0, więc czerwiec to 5
-    const today = new Date();
-    
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDifference = today.getMonth() - birthDate.getMonth();
-    const dayDifference = today.getDate() - birthDate.getDate();
-
-    // Sprawdzenie, czy miesiąc/dzień już minął w bieżącym roku, jeśli nie - odejmij rok
-    if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-      age--;
-    }
-
-    // Wyświetlenie wieku w elemencie div
-    document.getElementById("age").textContent = age;
-}
-
-calculateAge()

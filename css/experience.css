@@ -1,0 +1,166 @@
+body {
+    background-color: black;
+}
+
+.experienceBackground {
+    position: fixed;
+    height: 125%;
+    width: 125%;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    z-index: -1;
+    opacity: 0.7;
+    background-color: black;
+}
+
+.experienceTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 500px;
+}
+
+.experienceContainer1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experienceContainer1Content {
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%; /* Kontener zajmuje całą szerokość */
+    height: 100%;
+    max-width: 1200px; /* Opcjonalne ograniczenie szerokości */
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+.overflowHidden .experienceDeco1 {
+    overflow: visible;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 5vh;
+    font-weight: 600;
+    left: 0;
+    width: 100%; /* Tekst dopasowuje się do szerokości obrazka */
+    height: 100%; /* Tekst dopasowuje się do wysokości obrazka */
+    display: flex;
+    flex-direction: column; /* Ułożenie tekstu w kolumnie */
+    align-items: center;
+    justify-content: start;
+    color: black;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 20px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.textOverlay h2, 
+.textOverlay p, 
+.textOverlay a {
+    max-width: 100%; /* Zapobiega wychodzeniu tekstu poza kontener */
+    word-wrap: break-word; /* Złamie długie słowa lub linki */
+    white-space: normal; /* Pozwala na zawijanie tekstu */
+}
+
+.textOverlay a {
+    color: rgb(104, 38, 38);
+    font-weight: 900;
+}
+
+@media (min-width: 1025px) {
+    .experienceContainer1Content {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .experienceContainer1Content {
+        max-width: 50%;
+    }
+}
+
+.experienceTitleCover {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin-top: 70px;
+    max-width: 700px;
+    max-height: 500px;
+}
+
+.experienceTitle {
+    position: absolute;
+    color: black;
+    font-family: "Sancreek", serif;
+    transform: rotate(-10deg) translate(-17px, 43px);
+    font-size: clamp(25px, 5vw, 60px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li:not(:last-child)::after {
+    background-color: #c9ac78 !important;
+}
+
+header nav ul li a:hover {
+    background-color: #faf9f1 !important;
+}
+
+.job {
+    background-color: #81532d;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    border-radius: 10px;
+    border: 2px #e7b78f solid;
+    font-size: 0.8em;
+    color: rgb(255, 230, 213);
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.borderShadowOverlay {
+    position: fixed;
+    width: 100vw; /* Szerokość całego ekranu */
+    height: 100dvh; /* Wysokość całego ekranu */
+    overflow: hidden; /* Ukrywa wychodzące elementy */
+}
+
+/* Overlay - efekt cienia na ramkach */
+.borderShadowOverlay::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    box-shadow: 
+        inset 50px -50px 200px rgba(0, 0, 0, 1), /* Cień od lewej i dolnej krawędzi */
+        inset -50px 0 200px rgba(0, 0, 0, 1); /* Cień po prawej krawędzi */
+    pointer-events: none; /* Zapewnia interakcję z treścią */
+    z-index: 3; /* Overlay nad treścią, ale poniżej treści kontenera */
+}
+
+#splash-screen {
+    background-color: #f8d093 !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="%23f8daac" stroke-width="1"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>') !important;
+}
+
+.experienceDeco1 {
+    position: relative;
+    left: 460px;
+    top: -1760px;
+    transform: scale(0.3) rotate(15deg);
+}

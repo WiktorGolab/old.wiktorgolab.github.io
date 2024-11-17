@@ -40,6 +40,25 @@ function abilityCard() {
     chatbot.style.transform = "translateY(-80vw)";
 }
 
+function calculateAge() {
+    const birthDate = new Date(2003, 5, 9); // Miesiące są indeksowane od 0, więc czerwiec to 5
+    const today = new Date();
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    const dayDifference = today.getDate() - birthDate.getDate();
+
+    // Sprawdzenie, czy miesiąc/dzień już minął w bieżącym roku, jeśli nie - odejmij rok
+    if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+      age--;
+    }
+
+    // Wyświetlenie wieku w elemencie div
+    document.getElementById("age").textContent = age;
+}
+
+calculateAge()
+
 function chatbot() {
     // Resetowanie efektu na innych ikonach
     resetIcons();
@@ -98,7 +117,7 @@ function displayMessage(message, sender) {
 }
 
 async function getAIResponse(userInput) {
-    const API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium";
+    const API_URL = "https://api-inference.huggingface.co/models/gpt2";
     const API_TOKEN = "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";
 
     const requestData = {
