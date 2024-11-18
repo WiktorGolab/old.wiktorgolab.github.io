@@ -21,6 +21,13 @@ body {
     max-height: 500px;
 }
 
+.educationTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 500px;
+}
+
 .experienceContainer1 {
     position: relative;
     display: flex;
@@ -41,18 +48,15 @@ body {
     overflow: hidden;
 }
 
-.overflowHidden .experienceDeco1 {
-    overflow: visible;
-}
-
 .textOverlay {
     position: absolute;
-    top: 5vh;
+    top: 0;
     font-weight: 600;
     left: 0;
     width: 100%; /* Tekst dopasowuje się do szerokości obrazka */
-    height: 100%; /* Tekst dopasowuje się do wysokości obrazka */
+    height: 90%; /* Tekst dopasowuje się do wysokości obrazka */
     display: flex;
+    gap: 20px;
     flex-direction: column; /* Ułożenie tekstu w kolumnie */
     align-items: center;
     justify-content: start;
@@ -63,6 +67,8 @@ body {
     z-index: 1;
     padding-left: 7vw;
     padding-right: 7vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
 }
 
 .textOverlay h2, 
@@ -78,6 +84,24 @@ body {
     font-weight: 900;
 }
 
+@media (max-width: 664px) {
+    .experienceContainer1Content img {
+        transform: scale(1.75) translateY(23%);
+    }
+
+    .overflowHidden {
+        height: 150vh !important;
+    }
+
+    .textOverlay {
+        transform: translateY(3.5%);
+    }
+
+    .experienceContainer2Content {
+        transform: scale(1.75) translateY(23%);
+    }
+}
+
 @media (min-width: 1025px) {
     .experienceContainer1Content {
         max-width: 70%;
@@ -87,6 +111,16 @@ body {
 @media (min-width: 1920px) {
     .experienceContainer1Content {
         max-width: 50%;
+    }
+
+    .educationTextContainer {
+        padding-top: 25vw;
+    }
+}
+
+@media (min-width: 1921px) {
+    .experienceContainer1Content {
+        max-width: 40%;
     }
 }
 
@@ -106,6 +140,21 @@ body {
     transform: rotate(-10deg) translate(-17px, 43px);
     font-size: clamp(25px, 5vw, 60px);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.educationTitle {
+    position: absolute;
+    color: rgb(255, 238, 216);
+    font-family: "Sancreek", serif;
+    font-size: clamp(25px, 5vw, 60px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-20px);
+}
+
+@media (max-width: 486px) {
+    .educationTitle {
+        transform: translateX(-20px) translateY(15px);
+    }
 }
 
 header nav ul li:not(:last-child)::after {
@@ -163,4 +212,40 @@ header nav ul li a:hover {
     left: 460px;
     top: -1760px;
     transform: scale(0.3) rotate(15deg);
+}
+
+.educationTextContainer {
+    position: absolute;
+    top: 0;
+    font-weight: 600;
+    left: 0;
+    width: 100%; /* Tekst dopasowuje się do szerokości obrazka */
+    height: 90%; /* Tekst dopasowuje się do wysokości obrazka */
+    display: flex;
+    gap: 20px;
+    flex-direction: column; /* Ułożenie tekstu w kolumnie */
+    align-items: center;
+    justify-content: start;
+    color: black;
+    text-align: left;
+    font-size: clamp(12px, 2vw, 20px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    transform: rotate(-7.7deg);
+}
+
+.educationContentCover {
+    position: absolute;
+    margin-top: 55rem;
+    max-width: 1300px;
+}
+
+.experienceContainer2Content {
+    width: 100%; /* Kontener zajmuje całą szerokość */
+    height: 100%;
+    max-width: 1300px;
 }
