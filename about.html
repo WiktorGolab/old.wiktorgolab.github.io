@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/about.css">
@@ -55,52 +56,60 @@
         </nav>
     </header>
 
-    <!-- Content -->
-    <div class="body2"></div>
-    <div class="content">
-        <main>
-            <p class="title translate" data-translate="about"></p>
-            <section style="border: 5px solid #f5f5f5;">
-                <p class="cursor-default" style="color: #dddddd; font-weight: 800; transform: translateY(-5px);">wiktor.md</p>
-                <div class="decoBlock" style="right: 15px;"></div>
-                <div class="decoBlock" style="right: 55px;"></div>
-                <div class="decoBlock" style="right: 95px;"></div>
-                
-                <p>Strona inna niż pozostałe: Motyw galaktyki, gwiazdy jako połączone kropki symbolizujące drogę kariery. W tle różne gwiezdne konstelacje. Galaktyczny interfejs dla większej ilości tekstu.</p>
-                <h2>Mówiąc wprost</h2>
-                <p>Jestem studentem trzeciego roku na Uniwersytecie Adama Mickiewicza w Poznaniu, z pasją do projektowania stron internetowych, tworzenia aplikacji i sztucznej inteligencji.
-                    Moją studencką podróż uzupełnia praktyczne doświadczenie zdobyte podczas staży i pracy w branży technologicznej. Podczas stażu w M3 Group pracowałem jako projektant stron internetowych (WordPress) i projektant aplikacji przy użyciu FlutterFlow, gdzie doskonaliłem swoje umiejętności w budowaniu przyjaznych dla użytkownika i responsywnych rozwiązań internetowych.    
-                </p>
-                <p>Aktualnie pełnię funkcję administratora i projektanta stron internetowych dla EDU-CZAR oraz DermaExpert. W ramach tych obowiązków zarządzam i rozwijam strony internetowe tych firm, dbając o ich funkcjonalność, atrakcyjność oraz łatwość użytkowania, co przekłada się na wzrost satysfakcji klientów i usprawnienie procesów biznesowych.</p>
-                <p>Nieustannie poszerzam swoje kompetencje i podejmuję nowe wyzwania w dynamicznie zmieniającym się świecie technologii i designu.</p>
-                <p>
-                    Dzięki zdobytemu doświadczeniu oraz certyfikatom, takim jak Fundamentals of Accelerated Computing with CUDA Python, Fundamentals of Deep Learning oraz Generative AI with Diffusion Models, jestem przygotowany na podejmowanie kolejnych kroków w mojej karierze, z otwartością na rozwój i poszerzanie zakresu swoich kompetencji zawodowych.
-                </p>
-                <h2>Umiejętności</h2>
-                <ul>
-                    <li>HTML, CSS, JavaScript, C, Java, Latex, Markdown, Python, Wordpress (Elementor, WPBakery), Figma, Gimp, Adobe Premiere Pro, Github, Node.js, MMF2, TGF2, Clickteam Fusion, Flutterflow, SQL,</li>
-                    <li>Praca samodzielna, praca zespołowa, szybkość w nauce, kreatywne rozwiązania, dbałość o szczegóły</li>
-                    <li>Biegłe korzystanie z modeli AI (ChatGPT, modele dyfuzyjne np. Stable Diffusion, Topaz Gigapixel AI)</li>
-                    <!-- Dodaj inne umiejętności -->
-                </ul>
-                <h2>Certyfikaty i Wyróżnienia</h2>
-                <ul>
-                    <li>NVIDIA Fundamentals of Accelerated Computing with CUDA Python</li>
-                    <li>NVIDIA Fundamentals of Deep Learning</li>
-                    <li>NVIDIA Generative AI with Diffusion Models</li>
-                    <!-- Dodaj inne osiągnięcia -->
-                </ul>
-                <h2>Trochę więcej o mnie...</h2>
-                <p>
-                    Poza pracą zawodową, osobiście interesuję się sztuczną inteligencją i od kilku lat eksploruję narzędzia AI. Lubię również tworzyć materiały cyfrowe, wykorzystując narzędzia takie jak FL Studio, Adobe Premiere Pro i GIMP do realizacji kreatywnych idei, które umieszczam anonimowo na popularnych platformach social media. W wolnym czasie chętnie sięgam również po gry komputerowe oraz filmy, co pozwala mi odpocząć i czerpać inspiracje wizualne oraz koncepcyjne do własnych projektów.
-                </p>
-                <h2>Zobacz też</h2>
-                <ul>
-                    <li>Projekty</li>
-                    <li>Doświadczenie</li>
-                </ul>
-            </section>
-        </main>
+    <!-- Zapętlony film w tle -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="vid/stars.mp4" type="video/mp4">
+            <p class="translate" data-translate="otherVideo"></p>
+        </video>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; flex-direction: column; gap: 20px;">
+        <!-- Sekcja "Mówiąc wprost" -->
+        <div class="section section-intro shadowedImage">
+            <h2 class="translate" data-translate="aboutToPutItSimply"></h2>
+            <p class="translate" data-translate="aboutText1"></p>
+            <br>
+            <p class="translate" data-translate="aboutText2"></p>
+            <br>
+            <p class="translate" data-translate="aboutText3"></p>
+            <br>
+            <p class="translate" data-translate="aboutText4"></p>
+        </div>
+
+        <!-- Sekcja "Umiejętności" -->
+        <div class="section section-skills shadowedImage">
+            <h2 class="translate" data-translate="aboutSkills"></h2>
+            <ul>
+                <li>HTML, CSS, JavaScript, C, Java, Latex, Markdown, Python, WordPress (Elementor, WPBakery), Figma, Gimp, Adobe Premiere Pro, Github, Node.js, MMF2, TGF2, Clickteam Fusion, Flutterflow, SQL, YAML/JSON</li>
+                <li class="translate" data-translate="aboutSkill1"></li>
+                <li class="translate" data-translate="aboutSkill2"></li>
+            </ul>
+        </div>
+
+        <!-- Sekcja "Trochę więcej o mnie" -->
+        <div class="section section-about shadowedImage">
+            <h2 class="translate" data-translate="aboutMore"></h2>
+            <p class="translate" data-translate="aboutMoreText1"></p>
+            <br>
+            <p class="translate" data-translate="aboutMoreText2"></p>
+            <br>
+            <p class="translate" data-translate="aboutMoreText3"></p>
+        </div>
+
+        <!-- Sekcja "Zobacz też" -->
+        <div class="section section-links shadowedImage">
+            <h2 class="translate" data-translate="aboutSeeAlso"></h2>
+            <ul>
+                <li><a href="projects.html" style="color: white; text-decoration: none;" class="translate" data-translate="projects"></a></li>
+                <li><a href="experience.html" style="color: white; text-decoration: none;" class="translate" data-translate="experience"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CV Download -->
+    <div class="cv-download shadowedImageSmall">
+        <img src="img/pdf.png" alt="PDF" class="pdf-icon" draggable="false">
+        <a href="sciezka-do-cv.pdf" download class="translate" data-translate="otherCV" title="CV.pdf"></a>
     </div>
 
     <!-- Footer HTML -->

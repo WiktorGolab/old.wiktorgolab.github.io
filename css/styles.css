@@ -211,3 +211,35 @@ li {
 .shadowedImageSmall {
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
 }
+
+.cv-download {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 13px 25px;
+    border: 3px solid #e0e0e0;
+    border-radius: 30px;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.9em;
+    z-index: 900;
+}
+
+.cv-download .pdf-icon {
+    width: 24px;
+    height: 24px;
+    transform: scale(1.4);
+    margin-right: 15px;
+}
+
+.cv-download a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.cv-download a:hover {
+    text-decoration: underline;
+}

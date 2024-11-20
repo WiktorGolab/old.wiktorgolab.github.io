@@ -100,12 +100,6 @@ body {
     .experienceContainer2Content {
         transform: scale(1.75) translateY(23%);
     }
-
-    .educationTextContainer {
-        transform: rotate(0deg) !important;
-        margin-bottom: 0 !important;
-        padding-top: 2% !important;
-    }
 }
 
 @media (min-width: 1025px) {
@@ -115,15 +109,6 @@ body {
 }
 
 @media (max-width: 1439px) {
-    .educationTextContent {
-        width: 87% !important;
-        margin-top: 0px !important;
-    }
-
-    .educationTextContainer {
-        gap: 3px !important;
-    }
-
     .experienceDeco1 {
         display: none !important;
     }
@@ -142,11 +127,6 @@ body {
 }
 
 @media (min-width: 1440px) {
-    .educationTextContent {
-        width: 80% !important;
-        margin-top: 100px !important;
-    }
-
     .experienceDeco1 {
         display: none !important;
     }
@@ -170,15 +150,6 @@ body {
 @media (min-width: 1920px) {
     .experienceContainer1Content {
         max-width: 50%;
-    }
-
-    .educationTextContainer {
-        padding-top: 25vw;
-    }
-
-    .educationTextContent {
-        width: 60% !important;
-        margin-top: 50px !important;
     }
 
     .experienceDeco1 {
@@ -206,11 +177,6 @@ body {
 @media (min-width: 1921px) {
     .experienceContainer1Content {
         max-width: 40%;
-    }
-
-    .educationTextContent {
-        width: 50% !important;
-        margin-top: 0 !important;
     }
 
     .experienceDeco1 {
@@ -413,75 +379,230 @@ header nav ul li a:hover {
     100% { transform: rotate(-10deg) translate(0, 0); }
 }
 
-.educationTextContainer {
-    position: absolute;
-    top: 0;
-    font-weight: 600;
-    left: 0;
-    width: 100%; /* Tekst dopasowuje się do szerokości obrazka */
-    display: flex;
-    gap: 20px;
-    flex-direction: column; /* Ułożenie tekstu w kolumnie */
-    align-items: start;
-    justify-content: start;
-    color: black;
-    text-align: left;
-    font-size: clamp(9px, 1.6vw, 20px);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    padding-left: 7vw;
-    padding-right: 7vw;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
-    transform: rotate(-7.7deg);
-}
-
-.certificatesTextContainer {
-    position: absolute;
-    top: 0;
-    font-weight: 600;
-    left: 0;
-    max-width: 1300px; /* Tekst dopasowuje się do szerokości obrazka */
-    display: flex;
-    gap: 10px;
-    flex-direction: column; /* Ułożenie tekstu w kolumnie */
-    align-items: center;
-    justify-content: center;
-    color: black;
-    text-align: center;
-    font-size: clamp(12px, 2vw, 20px);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    padding-left: 7vw;
-    padding-right: 7vw;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-}
-
-.educationContentCover {
-    position: absolute;
-    margin-top: 55rem;
-    max-width: 1300px;
-}
-
 .experienceContainer2Content {
     width: 100%; /* Kontener zajmuje całą szerokość */
     height: 100%;
     max-width: 1300px;
 }
 
-.educationTextContent {
+/* Styl głównego kontenera */
+.centeredContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 50%;
-    height: 80%;
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    height: 100vh; /* Pełna wysokość okna przeglądarki */
+    text-align: center;
+    position: relative;
 }
 
-.certificatesTextContent {
+/* Styl tła z obrazkiem */
+.certificatesBackground {
+    width: 100%;
+    max-width: 1300px; /* Maksymalna szerokość kontenera */
+    background-image: url('/img/experienceContainer3.png'); /* Ustawienie tła */
+    background-size: cover; /* Tło dopasowane do kontenera */
+    background-position: center; /* Wyśrodkowanie tła */
+    background-repeat: no-repeat;
+    padding: 150px; /* Odstęp dla zawartości */
+}
+
+@media (max-width: 865px) {
+    .certificatesBackground {
+        margin-top: 200px;
+        margin-bottom: 200px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 220px;
+        padding-bottom: 200px;
+    }
+
+    .certificateImage {
+        transform: scale(1) !important;
+    }
+
+    .certificateItem {
+        width: 100% !important;
+    }
+}
+
+.certificatesContent {
     display: flex;
+    flex-flow: wrap;
     align-items: center;
     justify-content: center;
+}
+
+/* Styl zawartości */
+.certificatesContent h1 {
+    font-size: clamp(3rem, 5vw, 4em);
+    margin-bottom: 5px;
+    font-family: 'Sancreek', serif;
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+}
+
+.certificatesContent p {
+    font-size: clamp(1rem, 2.5vw, 1.4em);
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative; /* Ustawienie dla pseudo-elementów */
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+}
+
+.certificateItem {
+    display: flex; /* Ustawienie Flexbox */
+    align-items: center; /* Wyrównanie obrazka i tekstu w pionie */
+    justify-content: start;
+    background-color: rgba(255, 250, 220, 0.7); /* Przezroczyste białe tło */
+    padding: 15px;
+    margin-bottom: 15px; /* Odstęp między certyfikatami */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    width: 80%;
+    position: relative; /* Aby działało pseudoelementowanie */
+}
+
+.certificateItem::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px dashed rgb(197, 194, 151); /* Brązowa kreskowana linia */
+    border-radius: 8px; /* Dopasowanie do zaokrąglonych rogów */
+    pointer-events: none; /* Aby pseudo-element nie zakłócał interakcji */
+}
+
+.certificateImage {
+    width: 100px; /* Szerokość obrazka */
+    height: auto; /* Zachowanie proporcji */
+    margin-right: 15px; /* Odstęp między obrazkiem a tekstem */
+    transform: scale(0.8);
+}
+
+/* Styl nagłówków certyfikatów */
+.certificateItem h2 {
+    font-size: clamp(1rem, 2vw, 1.2em);
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Styl tekstu w certyfikatach */
+.certificateItem p {
+    font-size: clamp(0.8rem, 1.5vw, 0.95em);
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Styl linków */
+.certificateItem a {
+    font-size: clamp(0.9rem, 2vw, 1.1em);
+    color: rgb(104, 38, 38); /* Niebieski link */
+    font-weight: 900;
+    line-height: 0;
+    text-decoration: none;
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+}
+
+.certificateItem a:hover {
+    text-decoration: underline; /* Podkreślenie przy najechaniu */
+}
+
+/* Styl tła z obrazkiem */
+.educationBackground {
     width: 100%;
+    max-width: 1300px; /* Maksymalna szerokość kontenera */
+    background-image: url('/img/experienceContainer2.png'); /* Ustawienie tła */
+    background-size: cover; /* Tło dopasowane do kontenera */
+    background-position: center; /* Wyśrodkowanie tła */
+    background-repeat: no-repeat;
+    padding: 150px; /* Odstęp dla zawartości */
+}
+
+@media (max-width: 865px) {
+    .educationContent {
+        transform: rotate(0deg) !important;
+    }
+
+    .educationBackground {
+        padding: 30px;
+    }
+
+    .educationContent h1 {
+        font-size: clamp(2rem, 5vw, 4em) !important;
+    }
+}
+
+.educationContent {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    gap: 0;
+    transform: rotate(-7.7deg);
+}
+
+/* Styl zawartości */
+.educationContent h1 {
+    font-size: clamp(3rem, 5vw, 4em);
+    margin-bottom: 5px;
+    font-family: 'Sancreek', serif;
+    line-height: 1.2;
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+}
+
+.educationContent p {
+    font-size: clamp(1rem, 2.5vw, 1.4em);
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative; /* Ustawienie dla pseudo-elementów */
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+}
+
+.educationItem {
+    display: flex; /* Ustawienie Flexbox */
+    align-items: center; /* Wyrównanie obrazka i tekstu w pionie */
+    justify-content: start;
+    background-color: rgba(255, 250, 220, 0.7); /* Przezroczyste białe tło */
+    padding: 15px;
+    margin-bottom: 15px; /* Odstęp między certyfikatami */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    position: relative; /* Aby działało pseudoelementowanie */
+}
+
+.educationItem::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px dashed rgb(197, 194, 151); /* Brązowa kreskowana linia */
+    border-radius: 8px; /* Dopasowanie do zaokrąglonych rogów */
+    pointer-events: none; /* Aby pseudo-element nie zakłócał interakcji */
+}
+
+.educationImage {
+    width: 100px; /* Szerokość obrazka */
+    height: auto; /* Zachowanie proporcji */
+    margin-right: 15px; /* Odstęp między obrazkiem a tekstem */
+    transform: scale(0.8);
+}
+
+/* Styl nagłówków edukacji */
+.educationItem h2 {
+    font-size: clamp(1rem, 2vw, 1.2em);
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Styl tekstu w edukacji */
+.educationItem p {
+    font-size: clamp(0.8rem, 1.5vw, 0.95em);
+    color: #000000;
+    margin-bottom: 10px;
 }
