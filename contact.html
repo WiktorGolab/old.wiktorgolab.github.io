@@ -230,70 +230,82 @@
             document.getElementById('message').placeholder = translations[lang].contactFormPlaceholderMessage;
         }
     
-        // Funkcja do wysyłania e-maila
-        function sendEmail() {
-            const lang = localStorage.getItem('language') || 'pl';
-    
-            // Pobieranie wartości z formularza
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-    
-            document.querySelectorAll('.loading-dots').forEach(function(dot) {
-                dot.style.display = "flex";
-            });
-            document.getElementById('darkening').style.opacity = 1;
-
-            // Walidacja danych przed wysłaniem
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    
-            if (name === "" || email === "" || message === "") {
-                document.getElementById("responseMessage").innerText = translations[lang].contactFormNoValues;
-                responseMessage.style.color = "red";
-                document.querySelectorAll('.loading-dots').forEach(function(dot) {
-                    dot.style.display = "none";
-                });
-                document.getElementById('darkening').style.opacity = 0;
-                return;
-            }
-            if (!emailRegex.test(email)) {
-                document.getElementById("responseMessage").innerText = translations[lang].contactFormInvalidEmail;
-                responseMessage.style.color = "red";
-                document.querySelectorAll('.loading-dots').forEach(function(dot) {
-                    dot.style.display = "none";
-                });
-                document.getElementById('darkening').style.opacity = 0;
-                return;
-            }
-    
-            // Wysyłanie e-maila za pomocą EmailJS
-            emailjs.send("window.EmailjsAPI", window.EmailjsTemplate, {
-                name: name,
-                email: email,
-                message: message
-            })
-            .then((response) => {
-                document.getElementById("responseMessage").innerText = translations[lang].contactFormSuccess;
-                responseMessage.style.color = "green";
-                document.querySelectorAll('.loading-dots').forEach(function(dot) {
-                    dot.style.display = "none";
-                });
-                document.getElementById('darkening').style.opacity = 0;
-            }, (error) => {
-                document.getElementById("responseMessage").innerText = translations[lang].contactFormError;
-                responseMessage.style.color = "red";
-                document.querySelectorAll('.loading-dots').forEach(function(dot) {
-                    dot.style.display = "none";
-                });
-                document.getElementById('darkening').style.opacity = 0;
-                console.error(error);
-            });
-        }
-    
         // Dodanie listenera do załadowania formularza
         document.addEventListener("DOMContentLoaded", () => {
             setPlaceholders();
         });
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Funkcja do wysyłania wiadomości
+        async function sendEmail() {
+            const lang = localStorage.getItem('language') || 'pl';
+    
+            // Pobieranie wartości z formularza
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            // Elementy ładowania i odpowiedzi
+            const loadingDots = document.querySelectorAll('.loading-dots');
+            const darkening = document.getElementById('darkening');
+            const responseMessage = document.getElementById('responseMessage');
+    
+            // Animacja ładowania
+            loadingDots.forEach(dot => dot.style.display = "flex");
+            darkening.style.opacity = 1;
+    
+            // Walidacja danych
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!email || !message) {
+                responseMessage.innerText = translations[lang].contactFormNoValues;
+                responseMessage.style.color = "red";
+                resetLoadingState(loadingDots, darkening);
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                responseMessage.innerText = translations[lang].contactFormInvalidEmail;
+                responseMessage.style.color = "red";
+                resetLoadingState(loadingDots, darkening);
+                return;
+            }
+    
+            // Wysyłanie danych do Netlify Function
+            try {
+                const response = await fetch('https://wiktorgolabbackend.netlify.app/.netlify/functions/emailjs', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        message: message,
+                    }),
+                });
+    
+                const result = await response.json();
+    
+                if (result.success) {
+                    responseMessage.innerText = translations[lang].contactFormSuccess;
+                    responseMessage.style.color = "green";
+                } else {
+                    responseMessage.innerText = translations[lang].contactFormError;
+                    responseMessage.style.color = "red";
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                responseMessage.innerText = translations[lang].contactFormError;
+                responseMessage.style.color = "red";
+            } finally {
+                // Wyłączenie animacji ładowania
+                resetLoadingState(loadingDots, darkening);
+            }
+        }
+    
+        // Funkcja do resetowania animacji ładowania
+        function resetLoadingState(loadingDots, darkening) {
+            loadingDots.forEach(dot => dot.style.display = "none");
+            darkening.style.opacity = 0;
+        }
     </script>
 </body>
 </html>
