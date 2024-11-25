@@ -60,12 +60,18 @@ header nav ul li a:hover {
     border-radius: 10px;
 }
 
-.section h2 {
+.section h2, .section h3 {
     text-align: center;
     margin-bottom: 20px;
     font-size: clamp(1.7em, 2.5vw, 3em);
     line-height: 1.2;
     font-family: "Nova Square", sans-serif;
+}
+
+.section h3 {
+    font-size: clamp(1em, 1vw, 2.5em);
+    text-align: left;
+    font-weight: 500;
 }
 
 .section p, .section ul {
@@ -93,12 +99,17 @@ header nav ul li a:hover {
 
 .section-intro, .section-skills, .section-about, .section-links {
     margin-top: 20px;
+    margin-bottom: 40px;
     position: relative;
     padding: 20px;
     background: rgba(18, 38, 18, 0.7);
     border: 2px solid #57c057;
     color: #ffffff;
     border-radius: 10px;
+}
+
+.section-links {
+    max-width: 400px;
 }
 
 .section-skills ul {
@@ -120,22 +131,42 @@ header nav ul li a:hover {
     list-style: none;
     display: flex;
     align-items: center;
+    flex-flow: wrap;
     justify-content: center;
-    gap: 20px;
-    justify-content: space-around;
+    gap: 10px;
     padding: 0;
     margin-left: 0 !important;
 }
 
 .section-links ul li {
-    background: rgba(255, 69, 0, 0.9);
+    background: #234b23;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: 600;
+    position: relative; /* Potrzebne dla pseudo-elementów */
+    overflow: hidden;   /* Zapewnia, że pseudo-elementy nie wychodzą poza element */
+    transition: background 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.section-links ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Start od środka */
+    width: 0;
+    height: 3px; /* Wysokość bordera */
+    background: #ffffff;
+    transform: translateX(-50%);
+    transition: width 0.4s ease-out; /* Animacja rozciągania */
 }
 
 .section-links ul li:hover {
-    background: rgba(255, 69, 0, 0.7);
+    background: #2f632f;
+    transform: translateY(-3px);
+}
+
+.section-links ul li:hover::before {
+    width: 100%; /* Rozciągnięcie na pełną szerokość */
 }
 
 .aboutDeco1 {
@@ -168,5 +199,96 @@ header nav ul li a:hover {
     100% {
         mask-position: 0% 100%;
         -webkit-mask-position: 0% 100%;
+    }
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* Umożliwia zawijanie wierszy */
+    gap: 15px; /* Odstępy między elementami */
+    margin-top: 20px;
+    justify-content: center; /* Wyrównanie na środku */
+}
+
+.skill-item {
+    position: relative; /* Potrzebne dla pseudo-elementów */
+    display: flex;
+    flex-direction: column; /* Ikonka nad tekstem */
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background: rgba(35, 75, 35, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100px; /* Stała szerokość dla jednolitego wyglądu */
+    border: 2px solid #57c057;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+    overflow: hidden; /* Ukrycie połysku poza elementem */
+}
+
+.skill-item img {
+    max-width: 50px; /* Rozmiar ikonki */
+    max-height: 50px;
+    margin-bottom: 8px; /* Odstęp między ikoną a tekstem */
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+    user-select: none;
+}
+
+.skill-item span {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    opacity: 0;
+    transition: none;
+}
+
+.skill-item:hover::after {
+    animation: shine 1s ease-out; /* Animacja połysku */
+}
+
+/* Kluczowe klatki dla efektu połysku */
+@keyframes shine {
+    0% {
+        top: -100%;
+        left: -100%;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        top: -100%;
+        left: -100%;
+        opacity: 0;
     }
 }
