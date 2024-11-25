@@ -199,50 +199,7 @@
     <script src="js/script.js"></script>
     <script src="js/language.js" defer></script>
     <script src="js/contact.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-    
-        const firebaseConfig = {
-            apiKey: "AIzaSyAV9lU2VfGgnvsICCb-gJgwVsYKTjkpg8Y",
-            authDomain: "portfolio-9d547.firebaseapp.com",
-            projectId: "portfolio-9d547",
-            storageBucket: "portfolio-9d547.firebasestorage.app",
-            messagingSenderId: "674530815390",
-            appId: "1:674530815390:web:69c6b586792de56c81fa8f",
-            measurementId: "G-QZYKHJGXGW"
-        };
-    
-        // Inicjalizacja Firebase i Firestore
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-    
-        // Odwołanie do dokumentu o ID 'C86OQONgCDdoAbip4nre' w kolekcji 'keys'
-        const apiKeyDoc = doc(db, "keys", "C86OQONgCDdoAbip4nre");
-    
-        async function fetchApiKeys() {
-            const docSnap = await getDoc(apiKeyDoc);
-            if (docSnap.exists()) {
-                const EmailjsAPI = docSnap.data().EmailjsAPI;
-                const EmailjsTemplate = docSnap.data().EmailjsTemplate;
-                const EmailjsUserID = docSnap.data().EmailjsUserID;
-
-                if (EmailjsUserID) {
-                    // Inicjalizowanie emailjs
-                    emailjs.init(EmailjsUserID);
-
-                    // Udostępnienie danych globalnie
-                    window.EmailjsAPI = EmailjsAPI;
-                    window.EmailjsTemplate = EmailjsTemplate;
-                } else {
-                    console.error("Brak EmailjsUserID w dokumencie Firestore!");
-                }
-            } else {
-                console.log("Dokument nie istnieje!");
-            }
-        }
-    
+    <script>
         // Uruchomienie funkcji po załadowaniu strony
         window.onload = () => {
             fetchApiKeys();
