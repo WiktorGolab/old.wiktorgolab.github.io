@@ -106,6 +106,7 @@ header nav ul li a:hover {
     border: 2px solid #57c057;
     color: #ffffff;
     border-radius: 10px;
+    font-weight: 600;
 }
 
 .section-links {
@@ -175,6 +176,41 @@ header nav ul li a:hover {
     top: 150px;
     right: 70px;
     transform: rotate(10deg);
+    transition: transform 0.1s ease, right 0.1s ease;
+}
+
+@media (max-width: 2250px) {
+    .aboutDeco1 {
+        right: 50px;
+        transform: rotate(10deg) scale(0.8);
+    }
+}
+
+@media (max-width: 2035px) {
+    .aboutDeco1 {
+        right: 0;
+        transform: rotate(10deg) scale(0.6);
+    }
+}
+
+@media (max-width: 1805px) {
+    .aboutDeco1 {
+        right: -80px;
+        transform: rotate(10deg) scale(0.4);
+    }
+}
+
+@media (max-width: 1540px) {
+    .aboutDeco1 {
+        right: -130px;
+        transform: rotate(10deg) scale(0.3);
+    }
+}
+
+@media (max-width: 1366px) {
+    .aboutDeco1 {
+        display: none;
+    }
 }
 
 /* Minimalne przesunięcie w poziomie */

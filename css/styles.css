@@ -225,7 +225,7 @@ li {
     font-family: "Outfit", sans-serif;
     font-size: 0.9em;
     z-index: 2000;
-    transition: border-color 0.2s ease-out;
+    transition: border-color 0.2s ease-out, opacity 0.1s ease;
 }
 
 .cv-download .pdf-icon {
