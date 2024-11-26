@@ -237,71 +237,57 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // Funkcja do wysyłania wiadomości
         async function sendEmail() {
-            const lang = localStorage.getItem('language') || 'pl';
-    
-            // Pobieranie wartości z formularza
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-    
-            // Elementy ładowania i odpowiedzi
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const responseMessage = document.getElementById('responseMessage');
             const loadingDots = document.querySelectorAll('.loading-dots');
             const darkening = document.getElementById('darkening');
-            const responseMessage = document.getElementById('responseMessage');
-    
-            // Animacja ładowania
-            loadingDots.forEach(dot => dot.style.display = "flex");
-            darkening.style.opacity = 1;
-    
-            // Walidacja danych
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // Walidacja danych wejściowych
             if (!email || !message) {
-                responseMessage.innerText = translations[lang].contactFormNoValues;
+                responseMessage.innerText = "Please provide both email and message.";
                 responseMessage.style.color = "red";
                 resetLoadingState(loadingDots, darkening);
                 return;
             }
-            if (!emailRegex.test(email)) {
-                responseMessage.innerText = translations[lang].contactFormInvalidEmail;
-                responseMessage.style.color = "red";
-                resetLoadingState(loadingDots, darkening);
-                return;
-            }
-    
-            // Wysyłanie danych do Netlify Function
+
             try {
+                // Wysyłanie zapytania do backendu
                 const response = await fetch('https://wiktorgolabbackend.netlify.app/.netlify/functions/emailjs', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({
-                        email: email,
-                        message: message,
-                    }),
+                    body: JSON.stringify({ email, message }),
                 });
-    
+
+                // Obsługa błędów na poziomie odpowiedzi
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Unknown error occurred.');
+                }
+
                 const result = await response.json();
-    
+
                 if (result.success) {
-                    responseMessage.innerText = translations[lang].contactFormSuccess;
+                    responseMessage.innerText = "Email sent successfully!";
                     responseMessage.style.color = "green";
                 } else {
-                    responseMessage.innerText = translations[lang].contactFormError;
-                    responseMessage.style.color = "red";
+                    throw new Error(result.error || 'Failed to send email.');
                 }
             } catch (error) {
+                // Obsługa błędów sieci lub serwera
                 console.error('Error:', error);
-                responseMessage.innerText = translations[lang].contactFormError;
+                responseMessage.innerText = "An error occurred: " + error.message;
                 responseMessage.style.color = "red";
             } finally {
-                // Wyłączenie animacji ładowania
+                // Resetowanie animacji ładowania
                 resetLoadingState(loadingDots, darkening);
             }
         }
-    
-        // Funkcja do resetowania animacji ładowania
+
+        // Funkcja resetująca animację ładowania
         function resetLoadingState(loadingDots, darkening) {
             loadingDots.forEach(dot => dot.style.display = "none");
             darkening.style.opacity = 0;
