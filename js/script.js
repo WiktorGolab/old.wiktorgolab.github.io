@@ -59,3 +59,23 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
         darkening.style.opacity = "1";
     }
 });
+
+function checkCvDownloadPosition() {
+    const cvDownload = document.querySelector(".cv-download");
+
+    // Sprawdzamy, czy użytkownik może dalej scrollować
+    const canScrollFurther = document.documentElement.scrollHeight > document.documentElement.scrollTop + window.innerHeight;
+
+    if (!canScrollFurther) { // Jeśli użytkownik nie może scrollować dalej
+        cvDownload.style.opacity = "0";
+        cvDownload.style.pointerEvents = "none";
+    } else {
+        cvDownload.style.opacity = "1";
+        cvDownload.style.pointerEvents = "all";
+    }
+}
+
+// Dodajemy event listener dla scrolla
+if (window.innerWidth <= 768) {
+    window.addEventListener("scroll", checkCvDownloadPosition);
+}
