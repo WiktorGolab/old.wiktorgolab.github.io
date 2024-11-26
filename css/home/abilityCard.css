@@ -8,6 +8,7 @@
     height: 590px; /* Możesz dostosować wysokość karty */
     margin: 50px auto; /* Centrujemy kartę na stronie */
     transition: transform 0.3s ease, opacity 0.1s ease-in;
+    opacity: 0;
 }
 
 /* Karta wewnętrzna - kontener z dwoma stronami */

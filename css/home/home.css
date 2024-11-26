@@ -247,7 +247,7 @@
     }
 
     .console:hover {
-        transform: scale(1);
+        transform: scale(0.9) translate(15%, -15%);
     }
 }
 
@@ -255,11 +255,19 @@
     .console, .consoleDeco {
         transform: scale(0.65) translate(25%, -35%);
     }
+
+    .console:hover {
+        transform: scale(0.75) translate(25%, -25%);
+    }
 }
 
 @media (max-width: 1250px) {
     .console, .consoleDeco {
         transform: scale(0.5) translate(35%, -70%);
+    }
+
+    .console:hover {
+        transform: scale(0.65) translate(30%, -50%);
     }
 }
 

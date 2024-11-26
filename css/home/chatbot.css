@@ -13,6 +13,7 @@
     position: absolute;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Cień dla karty */
     transition: transform 0.3s ease, opacity 0.1s ease-in;
+    opacity: 0;
 }
 
 /* Okno czatu z określoną wysokością 600px i suwakami */
