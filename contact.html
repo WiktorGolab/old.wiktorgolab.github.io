@@ -242,7 +242,6 @@
             const responseMessage = document.getElementById('responseMessage');
             const loadingDots = document.querySelectorAll('.loading-dots');
             const darkening = document.getElementById('darkening');
-            const loadingDotsContainer = document.getElementById('loadingDotsContainer');
 
             // Walidacja danych wejściowych
             if (!email || !message) {
@@ -253,7 +252,6 @@
             }
 
             // Rozpoczęcie animacji ładowania
-            loadingDotsContainer.style.display = "block";
             darkening.style.opacity = 1;
 
             try {
