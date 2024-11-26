@@ -177,12 +177,39 @@ header nav ul li a:hover {
     right: 70px;
     transform: rotate(10deg);
     transition: transform 0.1s ease, right 0.1s ease;
+    animation: shake6 10s ease-in-out infinite;
+}
+
+.aboutDeco2 {
+    position: absolute;
+    width: 700px;
+    top: 550px;
+    left: 20px;
+    transition: transform 0.1s ease, right 0.1s ease;
+    animation: shake5 10s ease-in-out infinite;
+    transform: scale(1);
+}
+
+.aboutDeco3 {
+    position: absolute;
+    width: 600px;
+    top: 1550px;
+    right: 70px;
+    transform: rotate(10deg);
+    transition: transform 0.1s ease, right 0.1s ease;
+    animation: shake7 10s ease-in-out infinite;
 }
 
 @media (max-width: 2250px) {
     .aboutDeco1 {
         right: 50px;
         transform: rotate(10deg) scale(0.8);
+    }
+}
+
+@media (max-width: 721px) {
+    .aboutDeco2 {
+        left: -360px;
     }
 }
 
