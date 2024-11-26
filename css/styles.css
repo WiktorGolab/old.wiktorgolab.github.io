@@ -219,7 +219,7 @@ li {
     display: flex;
     align-items: center;
     background-color: #f8f9fa;
-    padding: 8px 25px;
+    padding: 8px 24px;
     border: 3px solid #e0e0e0;
     border-radius: 30px;
     font-family: "Outfit", sans-serif;
@@ -231,8 +231,10 @@ li {
 .cv-download .pdf-icon {
     width: 24px;
     height: 24px;
+    top: 2px;
+    position: relative;
     transform: scale(1.4);
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .cv-download a {
