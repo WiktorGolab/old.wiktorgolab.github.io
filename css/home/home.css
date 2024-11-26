@@ -11,6 +11,10 @@
         transform: scale(1);
     }
 
+    .abilityCard {
+        transform: scale(1);
+    }
+
     .icon-wrapper {
         transform: translateX(-100px);
     }
@@ -33,49 +37,15 @@
     .icon-wrapper {
         transform: translateX(-255px);
     }
-
-    .console:hover {
-        transform: scale(1.2) translateY(0);
-    }
 }
 
 @media (max-width: 1919px) {
-    .console {
-        right: -40px !important;
-        transform: scale(0.8) translateY(-20%);
-    }
-
-    .console:hover {
-        transform: scale(0.9) translateY(-15%);
-    }
-
-    .consoleDeco {
-        right: -70px !important;
-        transform: scale(0.8) translateY(-20%);
-    }
-
     .imageScaling {
         width: 40%;
     }
 
     .icon-wrapper {
         transform: translateX(-100px);
-    }
-}
-
-@media (max-width: 1439px) {
-    .console {
-        right: -40px !important;
-        transform: scale(0.6) translateY(-55%);
-    }
-
-    .console:hover {
-        transform: scale(0.65) translate(2%, -48%);
-    }
-
-    .consoleDeco {
-        right: -70px !important;
-        transform: scale(0.6) translate(-3%, -60%);
     }
 }
 
@@ -96,6 +66,14 @@
 
     .consoleDeco {
         display: none;
+    }
+
+    .abilityCard {
+        display: none;
+    }
+
+    .chatbot-container {
+        display: none !important;
     }
 }
 
@@ -126,11 +104,13 @@
 
 .coolItemsSpace {
     height: 100%;
-    position: relative;
+    position: absolute;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;
+    overflow: hidden;
+    z-index: 2;
 }
 
 .coolItemsSector {
@@ -142,6 +122,7 @@
     width: 100%;
     height: 50%;
     top: 0;
+    z-index: 3;
 }
 
 @media (max-width: 1600px) {
@@ -196,7 +177,7 @@
     line-height: 1;
     letter-spacing: 0.4px;
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.1s ease-in;
 }
 
 .console:hover {
@@ -233,7 +214,7 @@
     right: calc(5% - 30px);
     top: 140px;
     opacity: 1;
-    z-index: -1;
+    z-index: -2;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
@@ -258,4 +239,76 @@
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
     border: 5px solid #ea4759;
     color: #ea4759;
+}
+
+@media (max-width: 1715px) {
+    .console, .consoleDeco {
+        transform: scale(0.8) translate(15%, -20%);
+    }
+
+    .console:hover {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1439px) {
+    .console, .consoleDeco {
+        transform: scale(0.65) translate(25%, -35%);
+    }
+}
+
+@media (max-width: 1250px) {
+    .console, .consoleDeco {
+        transform: scale(0.5) translate(35%, -70%);
+    }
+}
+
+@media (max-width: 1920px) {
+    .chatbot-container {
+        transform: scale(0.9);
+    }
+}
+
+
+@media (max-width: 1715px) {
+    .abilityCard {
+        transform: scale(0.8) translate(50%, -15%) !important;
+    }
+}
+
+@media (max-width: 1439px) {
+    .abilityCard {
+        transform: scale(0.65) translate(60%, -30%) !important;
+    }
+}
+
+@media (max-width: 1250px) {
+    .abilityCard {
+        transform: scale(0.5) translate(100%, -55%) !important;
+    }
+}
+
+@media (max-width: 1920px) {
+    .abilityCard {
+        transform: scale(0.9) translate(15%, 0);
+    }
+}
+
+
+@media (max-width: 1715px) {
+    .chatbot-container {
+        transform: scale(0.7) translate(20%, -20%);
+    }
+}
+
+@media (max-width: 1439px) {
+    .chatbot-container {
+        transform: scale(0.65) translate(30%, -35%);
+    }
+}
+
+@media (max-width: 1250px) {
+    .chatbot-container {
+        transform: scale(0.5) translate(40%, -60%);
+    }
 }

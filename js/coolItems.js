@@ -9,14 +9,23 @@ function terminal() {
     // Zmieniamy transformacje dla innych elementów
     const console = document.querySelector(".console");
     const consoleDeco = document.querySelector(".consoleDeco");
-    console.style.transform = "translateY(0)";
-    consoleDeco.style.transform = "translateY(0)";
-
     const abilityCard = document.querySelector(".abilityCard");
-    abilityCard.style.transform = "translateY(-80vw)";
-
     const chatbot = document.querySelector(".chatbot-container");
-    chatbot.style.transform = "translateY(-80vw)";
+
+    console.style.opacity = 1;
+    consoleDeco.style.opacity = 1;
+    console.style.zIndex = 1;
+    consoleDeco.style.zIndex = 1;
+    console.style.pointerEvents = "all";
+    consoleDeco.style.pointerEvents = "all";
+
+    abilityCard.style.opacity = 0;
+    abilityCard.style.zIndex = -10;
+    abilityCard.style.pointerEvents = "none";
+
+    chatbot.style.opacity = 0;
+    chatbot.style.zIndex = -10;
+    chatbot.style.pointerEvents = "none";
 }
 
 function abilityCard() {
@@ -30,14 +39,53 @@ function abilityCard() {
     // Zmieniamy transformacje dla innych elementów
     const console = document.querySelector(".console");
     const consoleDeco = document.querySelector(".consoleDeco");
-    console.style.transform = "translateY(-80vw)";
-    consoleDeco.style.transform = "translateY(-80vw)";
-
     const abilityCard = document.querySelector(".abilityCard");
-    abilityCard.style.transform = "translateY(0)";
-
     const chatbot = document.querySelector(".chatbot-container");
-    chatbot.style.transform = "translateY(-80vw)";
+
+    console.style.opacity = 0;
+    consoleDeco.style.opacity = 0;
+    console.style.zIndex = -10;
+    consoleDeco.style.zIndex = -10;
+    console.style.pointerEvents = "none";
+    consoleDeco.style.pointerEvents = "none";
+
+    abilityCard.style.opacity = 1;
+    abilityCard.style.zIndex = 1;
+    abilityCard.style.pointerEvents = "all";
+
+    chatbot.style.opacity = 0;
+    chatbot.style.zIndex = -10;
+    chatbot.style.pointerEvents = "none";
+}
+
+function chatbot() {
+    // Resetowanie efektu na innych ikonach
+    resetIcons();
+
+    // Dodajemy aktywny efekt dla chatbota
+    const chatbotIcon = document.querySelector(".coolItemsChatbot");
+    chatbotIcon.classList.add("active");
+
+    // Zmieniamy transformacje dla innych elementów
+    const console = document.querySelector(".console");
+    const consoleDeco = document.querySelector(".consoleDeco");
+    const abilityCard = document.querySelector(".abilityCard");
+    const chatbot = document.querySelector(".chatbot-container");
+
+    console.style.opacity = 0;
+    consoleDeco.style.opacity = 0;
+    console.style.zIndex = -10;
+    consoleDeco.style.zIndex = -10;
+    console.style.pointerEvents = "none";
+    consoleDeco.style.pointerEvents = "none";
+
+    abilityCard.style.opacity = 0;
+    abilityCard.style.zIndex = -10;
+    abilityCard.style.pointerEvents = "none";
+
+    chatbot.style.opacity = 1;
+    chatbot.style.zIndex = 1;
+    chatbot.style.pointerEvents = "all";
 }
 
 function calculateAge() {
@@ -58,27 +106,6 @@ function calculateAge() {
 }
 
 calculateAge()
-
-function chatbot() {
-    // Resetowanie efektu na innych ikonach
-    resetIcons();
-
-    // Dodajemy aktywny efekt dla chatbota
-    const chatbotIcon = document.querySelector(".coolItemsChatbot");
-    chatbotIcon.classList.add("active");
-
-    // Zmieniamy transformacje dla innych elementów
-    const console = document.querySelector(".console");
-    const consoleDeco = document.querySelector(".consoleDeco");
-    console.style.transform = "translateY(-80vw)";
-    consoleDeco.style.transform = "translateY(-80vw)";
-
-    const abilityCard = document.querySelector(".abilityCard");
-    abilityCard.style.transform = "translateY(-80vw)";
-
-    const chatbot = document.querySelector(".chatbot-container");
-    chatbot.style.transform = "translateY(0)";
-}
 
 function resetIcons() {
     // Usuwamy aktywność z wszystkich ikon

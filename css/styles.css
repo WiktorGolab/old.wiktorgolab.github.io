@@ -24,7 +24,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 20 20" fill="none" stroke="%23eb4f61" stroke-width="1"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>');
     background-size: 80px 80px; /* Rozmiar kratki */
     transition: background-size 0.3s ease-out; /* Płynne przejście */
@@ -219,12 +219,13 @@ li {
     display: flex;
     align-items: center;
     background-color: #f8f9fa;
-    padding: 13px 25px;
+    padding: 8px 25px;
     border: 3px solid #e0e0e0;
     border-radius: 30px;
     font-family: "Outfit", sans-serif;
     font-size: 0.9em;
     z-index: 900;
+    transition: border-color 0.2s ease-out;
 }
 
 .cv-download .pdf-icon {
