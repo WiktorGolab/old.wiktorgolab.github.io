@@ -235,7 +235,6 @@
             setPlaceholders();
         });
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         async function sendEmail() {
             const email = document.getElementById('email').value;
@@ -243,6 +242,7 @@
             const responseMessage = document.getElementById('responseMessage');
             const loadingDots = document.querySelectorAll('.loading-dots');
             const darkening = document.getElementById('darkening');
+            const loadingDotsContainer = document.getElementById('loadingDotsContainer');
 
             // Walidacja danych wejściowych
             if (!email || !message) {
@@ -251,6 +251,10 @@
                 resetLoadingState(loadingDots, darkening);
                 return;
             }
+
+            // Rozpoczęcie animacji ładowania
+            loadingDotsContainer.style.display = "block";
+            darkening.style.opacity = 1;
 
             try {
                 // Wysyłanie zapytania do backendu
