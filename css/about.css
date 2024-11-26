@@ -31,8 +31,34 @@ header nav ul li a:hover {
     color: #57c057 !important;
 }
 
+.footerimg {
+    overflow: visible;
+}
+
 .footer-birds {
     top: -27vw !important;
+}
+
+.footer-birds.animate {
+    animation: ufoLevitate 15s ease-out infinite !important;
+}
+
+@keyframes ufoLevitate {
+    0% {
+        transform: scale(0.5) translate(-150%, 1vw); /* Start poza lewą krawędzią ekranu */
+    }
+    25% {
+        transform: scale(0.5) rotate(5deg) translate(50vw, 7vw);
+    }
+    50% {
+        transform: scale(0.5) rotate(-5deg) translate(100vw, 15vw);
+    }
+    75% {
+        transform: scale(0.5) rotate(5deg) translate(150vw, 1vw);
+    }
+    100% {
+        transform: scale(0.5) rotate(0deg) translateX(200vw, 12vw); /* Przelot poza prawą krawędź */
+    }
 }
 
 /* Tło wideo */
