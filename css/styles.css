@@ -224,7 +224,7 @@ li {
     border-radius: 30px;
     font-family: "Outfit", sans-serif;
     font-size: 0.9em;
-    z-index: 900;
+    z-index: 2000;
     transition: border-color 0.2s ease-out;
 }
 
