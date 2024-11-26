@@ -9,6 +9,8 @@
     margin: 50px auto; /* Centrujemy kartę na stronie */
     transition: transform 0.3s ease, opacity 0.1s ease-in;
     opacity: 0;
+    z-index: -10;
+    pointer-events: none;
 }
 
 /* Karta wewnętrzna - kontener z dwoma stronami */

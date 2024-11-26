@@ -14,7 +14,7 @@ function terminal() {
 
     console.style.opacity = 1;
     consoleDeco.style.opacity = 1;
-    console.style.zIndex = 1;
+    console.style.zIndex = 5;
     consoleDeco.style.zIndex = 1;
     console.style.pointerEvents = "all";
     consoleDeco.style.pointerEvents = "all";

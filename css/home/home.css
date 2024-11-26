@@ -123,6 +123,7 @@
     height: 50%;
     top: 0;
     z-index: 3;
+    pointer-events: none;
 }
 
 @media (max-width: 1600px) {
@@ -178,6 +179,7 @@
     letter-spacing: 0.4px;
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, opacity 0.1s ease-in;
+    z-index: 10;
 }
 
 .console:hover {
