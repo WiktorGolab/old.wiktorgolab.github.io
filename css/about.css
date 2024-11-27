@@ -220,7 +220,6 @@ header nav ul li a:hover {
     width: 600px;
     top: 150px;
     right: 70px;
-    transform: rotate(10deg);
     transition: transform 0.1s ease, right 0.1s ease;
     animation: shake6 10s ease-in-out infinite;
 }
@@ -240,9 +239,17 @@ header nav ul li a:hover {
     width: 600px;
     top: 1550px;
     right: 70px;
-    transform: rotate(10deg);
     transition: transform 0.1s ease, right 0.1s ease;
     animation: shake7 10s ease-in-out infinite;
+}
+
+.aboutDeco4 {
+    position: absolute;
+    width: 600px;
+    top: 2300px;
+    left: 20px;
+    transition: transform 0.1s ease, right 0.1s ease;
+    animation: shake3 10s ease-in-out infinite;
 }
 
 @media (max-width: 2250px) {

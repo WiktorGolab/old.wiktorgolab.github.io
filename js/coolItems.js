@@ -144,9 +144,6 @@ function displayMessage(message, sender) {
 }
 
 async function getAIResponse(userInput) {
-    const API_URL = "https://api-inference.huggingface.co/models/gpt2";
-    const API_TOKEN = "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";
-
     const requestData = {
         inputs: userInput,
         parameters: {
