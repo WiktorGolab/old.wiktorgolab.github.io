@@ -87,7 +87,7 @@ header nav ul li a:hover {
 }
 
 .section h2, .section h3 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     font-size: clamp(1.7em, 2.5vw, 3em);
     line-height: 1.2;
@@ -96,14 +96,19 @@ header nav ul li a:hover {
 
 .aboutH2 h2 {
     font-size: clamp(1.7em, 2.5vw, 3em);
-    line-height: 1.2;
+    line-height: 1;
     font-family: "Nova Square", sans-serif;
     color: #e6e6e6;
 }
 
+.section h2 {
+    opacity: 0.1;
+    color: #57c057;
+    font-size: clamp(1.3em, 2vw, 2em);
+}
+
 .section h3 {
     font-size: clamp(1em, 1vw, 2.5em);
-    text-align: left;
     font-weight: 500;
 }
 
