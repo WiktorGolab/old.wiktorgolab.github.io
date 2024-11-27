@@ -247,7 +247,7 @@ header nav ul li a:hover {
     position: absolute;
     width: 600px;
     top: 2300px;
-    left: 20px;
+    left: 0;
     transition: transform 0.1s ease, right 0.1s ease;
     animation: shake3 10s ease-in-out infinite;
 }
@@ -262,6 +262,16 @@ header nav ul li a:hover {
 @media (max-width: 721px) {
     .aboutDeco2 {
         left: -360px;
+        opacity: 0.5;
+    }
+
+    .aboutDeco3 {
+        opacity: 0.5;
+    }
+
+    .aboutDeco4 {
+        left: -360px;
+        opacity: 0.5;
     }
 }
 
