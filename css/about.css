@@ -105,7 +105,8 @@ header nav ul li a:hover {
 .section h2 {
     opacity: 0.1;
     color: #57c057;
-    font-size: clamp(1.3em, 2vw, 2em);
+    font-size: clamp(1em, 1vw, 2em);
+    line-height: 1;
 }
 
 .section h3 {
