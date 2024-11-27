@@ -2,6 +2,23 @@ body {
     background-color: black;
 }
 
+.footer-content {
+    background-color: #e2d2ad !important;
+    z-index: 4 !important;
+}
+
+.footer-image {
+    z-index: 4 !important;
+}
+
+.name, .social-links a, .footer-nav a {
+    color: rgb(0, 0, 0) !important;
+}
+
+.social-links a:hover, .footer-nav a:hover {
+    color: #727272 !important;
+}
+
 .experienceBackground {
     position: fixed;
     height: 125%;
@@ -261,6 +278,7 @@ header nav ul li a:hover {
     width: 100vw; /* Szerokość całego ekranu */
     height: 100dvh; /* Wysokość całego ekranu */
     overflow: hidden; /* Ukrywa wychodzące elementy */
+    pointer-events: none;
 }
 
 /* Overlay - efekt cienia na ramkach */

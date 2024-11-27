@@ -33,6 +33,7 @@
     position: relative;
     box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.6);
     cursor: url('/img/cursor.cur'), auto;
+    z-index: 1;
 }
 
 /* Pasek tytułowy */
@@ -161,6 +162,7 @@ button:hover {
     top: -80px;
     transform: scale(0.6);
     transition: transform 0.3s ease-out;
+    z-index: 2;
 }
 
 #rover1:hover {
@@ -346,6 +348,10 @@ textarea {
 
 .footer-content {
     background-color: #1a4475 !important;
+}
+
+.footer-birds {
+    z-index: -1000 !important;
 }
 
 .name {

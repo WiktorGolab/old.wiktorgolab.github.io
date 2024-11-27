@@ -37,6 +37,7 @@ header nav ul li a:hover {
 
 .footer-birds {
     top: -27vw !important;
+    z-index: 5 !important;
 }
 
 .footer-birds.animate {
