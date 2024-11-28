@@ -340,7 +340,7 @@ textarea {
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 20 20" fill="none" stroke="%235f9ee7" stroke-width="1"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 20 20" fill="none" stroke="%235f9ee7" stroke-width="1.5"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>');
     background-size: 80px 80px; /* Rozmiar kratki */
     transition: background-size 0.3s ease-out; /* Płynne przejście */
     transform-origin: center center;
@@ -384,7 +384,7 @@ header nav ul li a:hover {
 
 #splash-screen {
     background-color: #4793ea !important;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="%235f9ee7" stroke-width="1"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>') !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="%235f9ee7" stroke-width="1.5"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>') !important;
 }
 
 .contactClouds {

@@ -1,3 +1,21 @@
+#splash-screen {
+    background-color: #6126cf !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 20 20" fill="none" stroke="%236e39d1" stroke-width="1.5"><polygon points="10,1 18,5 18,15 10,19 2,15 2,5"/></svg>') !important;
+}
+
+.body2 {
+    background-color: #6126cf;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 20 20" fill="none" stroke="%236e39d1" stroke-width="1.5"><polygon points="10,1 18,5 18,15 10,19 2,15 2,5"/></svg>');
+}
+
+header nav ul li:not(:last-child)::after {
+    background-color: #6126cf !important;
+}
+
+header nav ul li a:hover {
+    background-color: #f9f6ff !important;
+}
+
 .web-button {
     background-color: rgb(79, 170, 67);
     color: #ffffff;
@@ -106,4 +124,92 @@
         flex-direction: column; /* Projekty w kolumnie */
         align-items: center; /* Wyśrodkowanie projektów */
     }
+}
+
+@media (max-width: 1919px) {
+    .content {
+        top: 200px;
+    }
+
+    .title {
+        top: -80px;
+    }
+
+    .pagination {
+        top: 200px !important;
+    }
+}
+
+.pagination {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Odstępy między przyciskami */
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f9f9f9;
+    border: 3px solid #ccc;
+    border-radius: 30px;
+    max-width: 300px;
+    top: 100px;
+    margin: 20px auto; /* Centrowanie divu */
+    z-index: 3;
+}
+
+.nav-btn {
+    background-color: #6e39d1;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 900;
+    transition: background-color 0.1s ease-out, border-color 0.1s ease-out;
+}
+
+.nav-btn-disabled {
+    background-color: #c5c5c5;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: not-allowed;
+    font-weight: 900;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-btn {
+    background-color: #fff;
+    color: #6e39d1;
+    border: 2px solid #6e39d1;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.1s ease-out, border-color 0.1s ease-out;
+    font-weight: 900;
+}
+
+.nav-btn:hover,
+.page-btn:hover {
+    background-color: #8865c9;
+    color: white;
+    border-color: #8865c9;
+}
+
+.page-btn.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
 }
