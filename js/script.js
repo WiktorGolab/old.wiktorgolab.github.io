@@ -76,6 +76,6 @@ function checkCvDownloadPosition() {
 }
 
 // Dodajemy event listener dla scrolla
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 839) {
     window.addEventListener("scroll", checkCvDownloadPosition);
 }
