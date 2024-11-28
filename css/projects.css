@@ -170,7 +170,7 @@ body {
         margin-bottom: 200px !important;
     }
 
-    .decoLine1, .decoLine2, .decoLine3 {
+    .decoContent {
         display: none !important;
     }
 }
@@ -299,7 +299,7 @@ body {
 
 /* Aktywacja tła */
 .modal.active {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(114, 114, 114, 0.5);
     opacity: 1;
     pointer-events: auto; /* Aktywacja interakcji */
 }
@@ -366,16 +366,25 @@ h2 {
     line-height: 1.2;
 }
 
+.modal .modal-content .zoom a img {
+    transition: transform 0.2s ease-in-out;
+    user-select: none;
+    transform: scale(1);
+}
+
 .modal .modal-content .zoom a img:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 .decoContent {
     position: absolute;
     pointer-events: none;
+    user-select: none;
     width: 100%;
     height: 150vh;
     overflow: hidden;
+    top: 0;
+    left: 0;
 }
 
 .decoLine1 {
@@ -398,4 +407,22 @@ h2 {
     right: -900px;
     transform: rotate(55deg) scale(1);
     z-index: -2;
+}
+
+.projectsDeco1 {
+    position: absolute;
+    top: 370px;
+    left: -140px;
+    transform: rotate(-10deg) scale(0.6);
+    z-index: -2;
+    opacity: 0.9;
+}
+
+.projectsDeco2 {
+    position: absolute;
+    top: 370px;
+    right: -145px;
+    transform: rotate(15deg) scale(0.4);
+    z-index: -2;
+    opacity: 1;
 }
