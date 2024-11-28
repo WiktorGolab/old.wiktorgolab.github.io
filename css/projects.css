@@ -199,10 +199,10 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     background-color: #f9f9f9;
-    border: 3px solid #ccc;
+    border: 5px solid #f1f1f1;
     border-radius: 30px;
     max-width: 300px;
-    top: 100px;
+    top: 60px;
     margin: 20px auto; /* Centrowanie divu */
     z-index: 3;
 }
@@ -312,14 +312,49 @@ body {
     border-radius: 10px;
     border: 5px solid rgb(245, 245, 245);
     padding: 20px;
+    padding-right: 5px;
     width: 80%;
     max-width: 800px;
+    max-height: 85vh; /* Maksymalna wysokość */
+    padding-top: 30px;
     transform: translateY(-50px); /* Start przesunięcia */
     opacity: 0;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: center; /* Ukrycie przewijania na całym modal-content */
     transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Tekst wewnątrz modalu */
+.modal-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 9px;
+    justify-content: flex-start;
+    max-height: 100vh; /* Maksymalna wysokość tylko dla tekstowej części */
+    overflow-y: auto; /* Przewijanie w pionie */
+    overflow-x: hidden; /* Brak przewijania w poziomie */ /* Dodatkowy margines dla scrollbar */
+    text-align: left;
+    box-sizing: content-box;
+}
+
+/* Pasek przewijania */
+.modal-text-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.modal-text-content::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 4px;
+}
+
+.modal-text-content::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+.modal-text-content::-webkit-scrollbar-track {
+    background: #f5f5f5;
 }
 
 /* Aktywacja zawartości */
@@ -338,13 +373,13 @@ body {
 .close-btn {
     position: absolute;
     background-color: #ffffff;
-    top: -20px;
-    right: -20px;
+    top: -25px;
+    right: -25px;
     color: #e08983;
     font-size: 28px;
     width: 50px;
     height: 50px;
-    line-height: 1.75;
+    line-height: 1.7;
     border-radius: 50%;
     font-weight: bold;
     cursor: pointer;

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modal) {
                 const modalContent = modal.querySelector('.modal-content');
                 modal.classList.add('active');
+                document.body.classList.add('no-scroll');
                 setTimeout(() => modalContent.classList.add('active'), 50); // Dodaj opóźnienie dla płynności
             }
         });
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const modalContent = modal.querySelector('.modal-content');
             modalContent.classList.add('close');
             modal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
             setTimeout(() => {
                 modalContent.classList.remove('active', 'close');
             }, 400); // Czas trwania animacji transform

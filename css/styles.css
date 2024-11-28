@@ -227,7 +227,7 @@ li {
     align-items: center;
     background-color: #f8f9fa;
     padding: 8px 24px;
-    border: 3px solid #e0e0e0;
+    border: 5px solid #f1f1f1;
     border-radius: 30px;
     font-family: "Outfit", sans-serif;
     font-size: 0.9em;
@@ -350,4 +350,10 @@ li {
     80% { transform: rotate(-20deg) translate(3px, 2px); }
     90% { transform: rotate(-10deg) translate(-5px, -3px); }
     100% { transform: rotate(10deg) translate(0, 0); }
+}
+
+/* Zablokowanie przewijania strony */
+.no-scroll {
+    overflow: hidden; /* Wyłączenie przewijania */
+    height: 100%; /* Utrzymanie pełnej wysokości */
 }
