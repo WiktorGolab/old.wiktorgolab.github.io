@@ -45,4 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 400); // Czas trwania animacji transform
         }
     }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') { // Sprawdzamy, czy naciśnięty klawisz to Escape
+            const activeModal = document.querySelector('.modal.active');
+            if (activeModal) {
+                closeModal(activeModal);
+            }
+        }
+    });
 });

@@ -336,7 +336,7 @@ body {
     max-height: 100vh; /* Maksymalna wysokość tylko dla tekstowej części */
     overflow-y: auto; /* Przewijanie w pionie */
     overflow-x: hidden; /* Brak przewijania w poziomie */ /* Dodatkowy margines dla scrollbar */
-    text-align: left;
+    text-align: center;
     box-sizing: content-box;
 }
 
