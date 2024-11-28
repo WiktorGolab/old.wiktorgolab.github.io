@@ -423,10 +423,19 @@ h2 {
     top: 370px;
     right: -145px;
     transform: rotate(15deg) scale(0.4);
-    z-index: -2;
+    z-index: -1;
     opacity: 1;
 }
 
 .projectImage {
     cursor: pointer;
+}
+
+.noproject {
+    position: relative;
+    width: 80px;
+    width: 80px;
+    box-shadow: none;
+    border: none;
+    opacity: 0.1;
 }
