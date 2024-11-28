@@ -435,7 +435,8 @@ h2 {
     position: relative;
     width: 80px;
     width: 80px;
-    box-shadow: none;
-    border: none;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 10px;
     opacity: 0.1;
 }
