@@ -60,6 +60,8 @@ const translations = {
         abilityCardAbilityText13 : "samych założeń projektu. Zwiększa szansę",
         abilityCardAbilityText14 : "na akceptację designu przez klienta o 80%.",
         coolItemsChatbot : "Porozmawiaj ze mną!",
+        chatbotSend : "Wyślij",
+        chatbotTextarea : "Wpisz wiadomość...",
 
         about: "O mnie",
         aboutToPutItSimply : "Mówiąc wprost",
@@ -195,6 +197,8 @@ const translations = {
         abilityCardAbilityText13 : "Increases the chance of design acceptance",
         abilityCardAbilityText14 : "by the client by 80%.",
         coolItemsChatbot : "Talk with me!",
+        chatbotSend : "Send",
+        chatbotTextarea : "Type a message...",
 
         about: "About me",
         aboutToPutItSimply : "To put it simply",
@@ -291,6 +295,8 @@ function setLanguage(lang) {
     const coolItemsCard = document.querySelectorAll(".coolItemsCard");
     const coolItemsChatbot = document.querySelectorAll(".coolItemsChatbot");
 
+    const chatbotTextarea = document.getElementById("user-input");
+
     webButton.forEach(button => {
         button.title = translations[lang].webButtonTitle; // Ustawienie tytułu dla każdego divu
     });
@@ -314,6 +320,9 @@ function setLanguage(lang) {
     coolItemsChatbot.forEach(Image => {
         Image.title = translations[lang].coolItemsChatbot; // Ustawienie tytułu dla każdego divu
     });
+    
+    chatbotTextarea.placeholder = translations[lang].chatbotTextarea; // Ustawienie tytułu dla każdego divu
+    
 
     localStorage.setItem("language", lang);
 }
