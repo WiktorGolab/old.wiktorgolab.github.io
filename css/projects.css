@@ -452,6 +452,7 @@ h2 {
     transform: rotate(-10deg) scale(0.6);
     z-index: -2;
     opacity: 0.9;
+    animation: shake8 8s ease-out infinite;
 }
 
 .projectsDeco2 {
@@ -461,6 +462,7 @@ h2 {
     transform: rotate(15deg) scale(0.4);
     z-index: -1;
     opacity: 1;
+    animation: shake9 10s ease-out infinite;
 }
 
 .projectImage {
