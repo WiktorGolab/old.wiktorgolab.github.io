@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modals = document.querySelectorAll('.modal');
 
     // Otwieranie modalu
-    document.querySelectorAll('.discover-button').forEach(button => {
+    document.querySelectorAll('.discover-button, .projectImage').forEach(button => {
         button.addEventListener('click', () => {
             const articleId = button.dataset.articleId;
             const modal = document.getElementById(`modal-${articleId}`);
