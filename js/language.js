@@ -87,6 +87,8 @@ const translations = {
         projectsWindowTitleShort : "...\\Projekty",
         myProjects : "Moje projekty :)",
         usedTechnologies : "Wykorzystane technologie:",
+        features : "<strong>Funkcje:</strong>",
+        workDesc : "<strong>Opis pracy:</strong>",
         discover : "Odkryj",
         webPage : "Strona internetowa",
         webButtonTitle : "Przejdź na stronę internetową projektu",
@@ -95,12 +97,39 @@ const translations = {
         githubPagesButtonTitle : "Przejdź na stronę Github Pages projektu",
         m3group : "Strona internetowa stworzona podczas stażu w M3Group:)",
         educzar : "Strona internetowa \"wizytówka\" stworzona na zlecenie:)",
+        projectsEduczar1 : "Wdrożono kompletny proces tworzenia i administrowania stroną internetową z wykorzystaniem WordPress'a, dostosowując rozwiązania do potrzeb edukacyjnych i komunikacyjnych organizacji, przyjaznej zarówno dla oka dziecka, jak i rodzica.",
+        projectsEduczar2 : "Aktualizacja treści przez ponad rok i wprowadzanie na bieżąco nowych postów.",
         outsider : "Poznaj moją internetową twórczość",
         pong : "Moja interpretacja klasycznej gry Pong z 1972 roku wydana przez Atari.",
+        projectsPong1 : "<strong>Pong</strong> – klasyczna już gra komputerowa będąca symulacją tenisa stołowego przy użyciu grafiki dwuwymiarowej. Celem rozgrywki jest pokonanie przeciwnika poprzez uzyskanie wyższego wyniku punktowego. Gra wydana została w 1972 roku przez Atari i jest jedną z najstarszych przeznaczonych na automaty.",
+        projectsPong2 : "<i>Źródło: <a href=\"https://pl.wikipedia.org/wiki/Pong\" target=\"_blank\" style=\"color: #818181;\">https://pl.wikipedia.org/wiki/Pong</a></i>",
+        projectsPong3 : "Gra Pong w nowym wydaniu.",
+        projectsPong4 : "Nowe elementy wizualne (w tym szum VHS).",
+        projectsPong5 : "Efekty dźwiękowe.",
+        projectsPong6 : "Autorska muzyka stworzona przeze mnie.",
+        projectsPong7 : "Opcja wyłączenia muzyki oraz dźwięków specjalnych.",
+        projectsPong8 : "Możliwość pauzy gry (Klawisz ESC).",
+        projectsPong9 : "Zmień prędkość piłki.",
+        projectsPong10 : "Zmień czułość obu paletek.",
+        projectsPong11 : "Włącz/Wyłącz efekt szumu VHS.",
+        projectsPong12 : "Tryb minimalistyczny (wyłączający rozpraszające napisy podczas gry).",
+        projectsPong13 : "Dostosuj poziom głośności muzyki.",
+        projectsPong14 : "Graj bez limitu na punkty oraz ustaw swój własny próg na zwycięstwo.",
         calculatorTitle : "Kalkulator naukowy",
         calculator : "Przyjemny w obsłudze kalkulator naukowy.",
+        projectsCalculator1 : "Podstawowe operacje (dodawanie, odejmowanie, mnożeniem, dzielenie, potęgowanie).",
+        projectsCalculator2 : "Specjalne funkcje (pierwiastek kwadratowy, funkcje trygonometryczne, logarytm dziesiętny, silnia, wartość bezwzględna).",
+        projectsCalculator3 : "Działania na nawiasach.",
+        projectsCalculator4 : "Historia obliczeń.",
+        projectsCalculator5 : "Tryb jasny i ciemny.",
+        projectsCalculator6 : "Możliwość zresetowania kalkulatora oraz usunięcia ostatnich znaków.",
+        projectsCalculator7 : "Umożliwia obliczenie wyniku po wprowadzeniu wyrażenia.",
+        projectsCalculator8 : "Obsługa błędów.",
+        calculatorDesc : "Prosty kalkulator stworzony w JavaScript, który obsługuje podstawowe operacje matematyczne, funkcje specjalne, a także tryb ciemny oraz historię obliczeń. Kalkulator jest przyjazny dla użytkownika i intuicyjny w obsłudze.",
         portfolioTitle : "Strona z portfolio",
         portfolio : "Przyjemna dla oka, responsywna i intuicyjna.",
+        projectsDermaExpert1 : "Stworzono kompleksową stronę internetową od podstaw, wykorzystując platformę WordPress, aby zapewnić nowoczesne i przyjazne dla użytkownika rozwiązanie. Proces obejmował projektowanie struktury i układu strony oraz implementację elementów wizualnych i treściowych, dostosowanych do specyfiki branży dermatologicznej.",
+        projectsDermaExpert2 : "Skupiono się na zapewnieniu responsywności oraz intuicyjności interfejsu użytkownika.",
         outsiderproject : "Projekt Outsider",
 
         experience: "Doświadczenie",
@@ -227,6 +256,8 @@ const translations = {
         projectsWindowTitleShort : "...\\Projects",
         myProjects : "My projects :)",
         usedTechnologies : "Technologies used:",
+        features : "<strong>Features:</strong>",
+        workDesc : "<strong>Description of work:</strong>",
         discover : "Discover",
         webPage : "Website",
         webButtonTitle : "Go to the project's website",
@@ -235,12 +266,39 @@ const translations = {
         githubPagesButtonTitle : "Go to the project's Github Pages",
         m3group : "A website created during an internship at M3Group:)",
         educzar : "Website \"business card\" created on commission:)",
+        projectsEduczar1 : "Carried out the overall process of creating and administering the website using WordPress, customizing solutions to meet the educational and communication needs of the organization, friendly to both the child and parent's eye.",
+        projectsEduczar2 : "Updating content for over a year and introducing new posts on a regular basis.",
         outsider : "Explore my online creations",
         pong : "My interpretation of the 1972 classic game Pong released by Atari.",
+        projectsPong1 : "<strong>Pong</strong> - a classic table tennis–themed twitch arcade sports video game, featuring simple two-dimensional graphics, manufactured by Atari and originally released on 29 November 1972. It is one of the earliest arcade video games.",
+        projectsPong2 : "<i>Source: <a href=\"https://en.wikipedia.org/wiki/Pong\" target=\"_blank\" style=\"color: #818181;\">https://en.wikipedia.org/wiki/Pong</a></i>",
+        projectsPong3 : "Pong game in a new edition.",
+        projectsPong4 : "New visual elements (including VHS noise).",
+        projectsPong5 : "Sound effects.",
+        projectsPong6 : "Original music created by me.",
+        projectsPong7 : "Option to disable music and special sounds.",
+        projectsPong8 : "Ability to pause the game (ESC key).",
+        projectsPong9 : "Change the speed of the ball.",
+        projectsPong10 : "Change the sensitivity of both palettes.",
+        projectsPong11 : "Enable/Disable VHS noise effect.",
+        projectsPong12 : "Minimalist mode (which disables distracting subtitles during gameplay).",
+        projectsPong13 : "Adjust the music volume.",
+        projectsPong14 : "Play with no limit on points and set your own threshold for victory.",
         calculatorTitle : "Scientific calculator",
         calculator : "A pleasant-to-use scientific calculator.",
+        calculatorDesc : "A simple calculator created in JavaScript that supports basic mathematical operations, special functions, as well as dark mode and calculation history. The calculator is user-friendly and intuitive to use.",
+        projectsCalculator1 : "Basic operations (addition, subtraction, multiplication, division, multiplication).",
+        projectsCalculator2 : "Special functions (square root, trigonometric functions, decimal logarithm, power, absolute value).",
+        projectsCalculator3 : "Actions on parentheses.",
+        projectsCalculator4 : "Computing history.",
+        projectsCalculator5 : "Light and dark mode.",
+        projectsCalculator6 : "Ability to reset the calculator and delete the last characters.",
+        projectsCalculator7 : "Allows you to calculate the result after entering an expression.",
+        projectsCalculator8 : "Error handling.",
         portfolioTitle : "Portfolio page",
         portfolio : "Pleasing to the eye, responsive and intuitive.",
+        projectsDermaExpert1 : "A complex website was created from scratch, using the WordPress platform to provide a modern and user-friendly solution. The process included the design of the site's structure and layout, as well as the implementation of visual and content elements tailored to the dermatology industry.",
+        projectsDermaExpert2 : "The focus was on ensuring responsiveness and an intuitive user interface.",
         outsiderproject : "Outsider Project",
 
         experience: "Experience",
@@ -287,7 +345,7 @@ function setLanguage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute("data-translate");
         if (translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            element.innerHTML = translations[lang][key];
         }
     });
 
@@ -327,9 +385,12 @@ function setLanguage(lang) {
         Image.title = translations[lang].coolItemsChatbot; // Ustawienie tytułu dla każdego divu
     });
     
-    chatbotTextarea.placeholder = translations[lang].chatbotTextarea; // Ustawienie tytułu dla każdego divu
+    if (chatbotTextarea) {
+        if (translations[lang].chatbotTextarea) {
+            chatbotTextarea.placeholder = translations[lang].chatbotTextarea;
+        }
+    }
     
-
     localStorage.setItem("language", lang);
 }
 
