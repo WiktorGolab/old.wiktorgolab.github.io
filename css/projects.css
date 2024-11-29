@@ -51,7 +51,7 @@ body {
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-.web-button {
+.web-button, .yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button {
     background-color: rgb(79, 170, 67);
     color: #ffffff;
     padding: 10px;
@@ -68,6 +68,35 @@ body {
     margin-top: auto;
     border-radius: 5px;
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button {
+    width: 50px;
+    font-size: 30px;
+}
+
+.yt-button {
+    background-color: #FF0000;
+}
+
+.fb-button {
+    background-color: #039BE5;
+}
+
+.sc-button {
+    background-color: #ff5500;
+}
+
+.tt-button {
+    background-color: #010101;
+}
+
+.xt-button {
+    background-color: #000;
+}
+
+.gd-button {
+    background-color: #3e6fc9;
 }
 
 .github-button {
