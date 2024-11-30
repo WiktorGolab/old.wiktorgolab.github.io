@@ -206,18 +206,23 @@
             const splashScreen = document.getElementById("splash-screen");
             const loadingDots = document.querySelector(".loading-dots");
 
-            // Dodaj klasę "hidden" dla efektu zanikania
-            splashScreen.style.opacity = 0;
-            loadingDots.style.opacity = 0;
+            const minimumDisplayTime = 200;
 
-            splashScreen.style.pointerEvents = "none";
-            loadingDots.style.pointerEvents = "none";
+            // Opuść splash screen dopiero po załadowaniu i upłynięciu minimalnego czasu
+            setTimeout(() => {
+                // Dodaj klasę "hidden" dla efektu zanikania
+                splashScreen.style.opacity = 0;
+                loadingDots.style.opacity = 0;
 
-            // Po zakończeniu animacji ukryj splash screen i pokaż treść
-            splashScreen.addEventListener("transitionend", function() {
-                splashScreen.style.display = "none"; // Ukryj splash screen
-                loadingDots.style.display = "none"; // Ukryj kropki ładowania
-            });
+                splashScreen.style.pointerEvents = "none";
+                loadingDots.style.pointerEvents = "none";
+
+                // Po zakończeniu animacji ukryj splash screen i pokaż treść
+                splashScreen.addEventListener("transitionend", function() {
+                    splashScreen.style.display = "none"; // Ukryj splash screen
+                    loadingDots.style.display = "none"; // Ukryj kropki ładowania
+                });
+            }, minimumDisplayTime);
         };
     </script>
     <script>
