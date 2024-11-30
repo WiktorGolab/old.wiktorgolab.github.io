@@ -390,6 +390,18 @@ function setLanguage(lang) {
             chatbotTextarea.placeholder = translations[lang].chatbotTextarea;
         }
     }
+
+    const cvLinks = document.querySelectorAll('.cv-download a');
+
+    cvLinks.forEach(link => {
+        if (lang === 'en') {
+            link.href = 'downloads/en_Wiktor Gołąb CV.pdf';
+            link.title = 'en_Wiktor Gołąb CV.pdf';
+        } else if (lang === 'pl') {
+            link.href = 'downloads/pl_Wiktor Gołąb CV.pdf';
+            link.title = 'pl_Wiktor Gołąb CV.pdf';
+        }
+    });
     
     localStorage.setItem("language", lang);
 }
