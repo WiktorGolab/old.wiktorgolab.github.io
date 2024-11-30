@@ -73,6 +73,7 @@ body {
 .yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button {
     width: 50px;
     font-size: 30px;
+    border-radius: 50%;
 }
 
 .yt-button {
