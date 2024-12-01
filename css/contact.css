@@ -387,6 +387,49 @@ header nav ul li a:hover {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="%235f9ee7" stroke-width="1.5"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>') !important;
 }
 
+.welcome-nav-button {
+    color: #4793ea !important;
+    font-family: Arial !important;
+    padding: 10px 15px !important;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-items: flex-start;
+    display: block;
+    line-height: normal;
+    min-height: 38px;
+    border-radius: 0;
+}
+
+/* Przyciski - Efekt najechania */
+.welcome-nav-button:hover {
+    color: #79b5fa !important;
+    background-color: #ffffff00 !important;
+}
+
+#closeBtn {
+    color: #4793ea !important;
+    border: 2.5px solid #4793ea !important;
+}
+
+#closeBtn:hover {
+    color: #79b5fa !important;
+    border: 2.5px solid #79b5fa !important;
+}
+
+.welcome-cv-download-deco {
+    background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+}
+
+.welcome-nav-deco {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)) !important;
+}
+
+.welcome-footer-deco {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)) !important;
+}
+
 .contactClouds {
     position: absolute;
     z-index: -1;

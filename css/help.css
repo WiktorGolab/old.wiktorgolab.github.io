@@ -1,0 +1,346 @@
+/* Globalny styl dla całego okna powitalnego */
+body {
+    transition: background-color 0.2s ease-out;
+}
+
+/* Styl dla kontenera okien */
+.welcome-container {
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+    transition: opacity 0.2s ease-out;
+    padding: 20px;
+}
+
+/* Styl dla poszczególnych okien */
+.welcome-window {
+    position: absolute; /* Używamy absolutnego pozycjonowania, żeby być pewnym, że okna są na środku */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 980px;  /* Maksymalna szerokość okna */
+    max-height: 80vh;  /* Maksymalna wysokość okna */
+    width: 90%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    border: 5px solid rgb(245, 245, 245);
+    overflow: hidden;  /* Zapobiega przewijaniu zawartości okna */
+    opacity: 0;
+    transform: translateX(100%); /* Domyślnie okno jest przesunięte poza ekran po prawej */
+    transition: opacity 0.2s ease-out, transform 0.2s ease-in-out;  /* Animacja opacity i transform */
+    z-index: 2001;
+}
+
+/* Okno aktywne */
+.welcome-window.active {
+    opacity: 1; /* Zmiana opacity */
+    transform: translateX(0); /* Przesunięcie na środek */
+}
+
+/* Okno, które znika */
+.welcome-window.hidden-left {
+    opacity: 0;
+    transform: translateX(-100%); /* Przesunięcie w lewo */
+}
+
+.welcome-window.hidden-right {
+    opacity: 0;
+    transform: translateX(100%); /* Przesunięcie w prawo */
+}
+
+/* Tytuł okna */
+.welcome-window h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Styl dla tekstu */
+.welcome-window p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Styl dla obrazków */
+.welcome-window img {
+    width: 100%;
+    max-width: 450px;
+    max-height: 450px;
+    height: 100%;
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transform: scale(1);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.welcome-window img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Nawigacja */
+.welcome-navigation, .welcome-navigation-start {
+    display: flex;
+    justify-content: space-between; /* Przycisk "Cofnij" po lewej, "Dalej" po prawej */
+    align-items: center;
+    width: 100%;
+    gap: 0;
+    position: relative;
+    margin-top: 10px;
+}
+
+.welcome-navigation-start {
+    justify-content: center;
+}
+
+/* Styl dla przycisków nawigacyjnych */
+.welcome-nav-button {
+    color: #ea4759;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 15px;
+    user-select: none;
+}
+
+/* Przyciski - Efekt najechania */
+.welcome-nav-button:hover {
+    color: #ff8b89;
+}
+
+/* Styl dla przycisku zamknięcia */
+#closeBtn {
+    color: #ea4759;
+    border: 2.5px solid #ea4759;
+    border-radius: 15px;
+    padding: 10px 15px;
+    transition: color 0.1s ease-out, border 0.1s ease-out;
+}
+
+#closeBtn:hover {
+    color: #ff8b89;
+    border: 2.5px solid #ff8b89;
+}
+
+/* Układ przycisków w nawigacji */
+.welcome-navigation .left-btn {
+    margin-right: auto; /* Wypycha przycisk "Cofnij" na lewo */
+}
+
+.welcome-navigation .right-btn {
+    margin-left: auto; /* Wypycha przycisk "Dalej" i "Zamknij" na prawo */
+}
+
+/* Przycisk zamknięcia */
+.welcome-close-btn {
+    position: absolute;
+    background-color: #ffffff;
+    top: 5px;
+    right: 5px;
+    color: #e08983;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    line-height: 1.7;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+    user-select: none;
+}
+
+.welcome-close-btn:hover {
+    background-color: #f0e4e3;
+    color: #f09d97;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-language-switcher {
+    position: relative;
+    display: flex;
+    gap: 30px; /* Odstęp między przyciskami */
+}
+
+.welcome-lang-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    gap: 6px;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.welcome-lang-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-lang-content {
+    display: flex;
+    align-items: center; /* Wyrównanie obrazka i tekstu w pionie */
+    gap: 10px; /* Odstęp między obrazkiem a tekstem */
+}
+
+.welcome-lang-content img {
+    height: 20px; /* Można dostosować wysokość obrazka */
+    width: auto;
+    user-select: none;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: scale(1) !important;
+}
+
+.welcome-language-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 5px solid rgb(245, 245, 245);
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.welcome-cv-download {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 8px 24px;
+    border: 5px solid #f1f1f1;
+    border-radius: 30px;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.9em;
+    z-index: 2000;
+    transition: border-color 0.2s ease-out, opacity 0.1s ease;
+    color: black;
+    font-weight: bold;
+}
+
+.welcome-cv-download .pdf-icon {
+    width: 24px;
+    height: 24px;
+    top: 2px;
+    position: relative;
+    transform: scale(1.4) !important;
+    margin-right: 12px;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.welcome-cv-download-deco {
+    position: absolute;
+    right: calc(0px - 50vh);
+    bottom: calc(0px - 50vh);
+    background: radial-gradient(circle closest-side, rgba(234, 71, 90, 0.9), rgba(255, 255, 255, 0));
+    width: 100vh;  /* Przykładowa szerokość */
+    height: 100vh; /* Przykładowa wysokość */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+.welcome-nav-deco {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(234, 71, 90, 0.9), rgba(255, 255, 255, 0));
+    width: 100%;
+    height: 10vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+    z-index: 2001;
+}
+
+.welcome-footer-deco {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(234, 71, 90, 0.6), rgba(255, 255, 255, 0));
+    width: 100%;
+    height: 10vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.help2container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    line-height: 1.2;
+}
+
+.help2container2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 15px;
+    border: 5px solid #f1f1f1;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
+
+.help2container3 {
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+}
+
+.help2container3 img {
+    filter: invert(1);
+    transform: scale(1) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 50px;
+    height: auto;
+}
+
+.help4container {
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap-reverse;
+    gap: 2dvh;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}

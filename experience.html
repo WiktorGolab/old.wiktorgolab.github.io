@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/help.css">
     <link rel="icon" type="image/png" href="img/favico.png">
 </head>
 
@@ -33,6 +34,9 @@
 
     <!-- Navigator -->
     <header>
+        <div class="nav-help-content">
+            <div class="nav-help" onclick="help()">?</div>
+        </div>
         <nav>
             <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links">
@@ -56,6 +60,103 @@
             </div>
         </nav>
     </header>
+
+    <!-- Introduction -->
+    <div class="welcome-container">
+        <!-- Help 1 -->
+        <div class="welcome-window active" id="help1" style="max-width: 600px;">
+            <span class="welcome-close-btn" onclick="closeWindow()">&times;</span>
+            <p style="margin-bottom: 0; font-weight: 600;">(1/4)</p>
+            <h1 class="translate" data-translate="help1" style="font-size: 3vh;"></h1>
+            <div class="welcome-language-container">
+                <p style="margin-bottom: 10px; line-height: 1.3;"><strong>Proszę wybrać język/Please select your language</strong></p>
+            <div class="welcome-language-switcher">
+                <button onclick="setLanguage('pl')" class="welcome-lang-button" title="Przełącz język strony na polski.">
+                    <div class="welcome-lang-content">
+                        <img src="img/pl_lang.png" draggable="false" alt="Polish Flag">Polski
+                    </div>
+                </button>
+                <button onclick="setLanguage('en')" class="welcome-lang-button" title="Change website language to english.">
+                    <div class="welcome-lang-content">
+                        <img src="img/eng_lang.png" draggable="false" alt="English Flag">English
+                    </div>
+                </button>
+            </div>
+            </div>
+            <p class="translate" data-translate="help2"></p>
+            <p class="translate" data-translate="help3" style="line-height: 1.2;"></p>
+            <div class="welcome-navigation-start">
+                <button class="welcome-nav-button right-btn translate" data-translate="helpButtonStart" id="nextBtn1" onclick="navigate(1, 0)"></button>
+            </div>
+        </div>
+    
+        <!-- Help 2 -->
+        <div class="welcome-window" id="help2" style="max-width: 620px;">
+            <span class="welcome-close-btn" onclick="closeWindow()">&times;</span>
+            <p style="margin-bottom: 0; font-weight: 600;">(2/4)</p>
+            <h1 class="translate" data-translate="home" style="font-size: 4vh;"></h1>
+            <p style="margin-bottom: 15px; line-height: 1.2;" class="translate" data-translate="home8"></p>
+            <div class="help2container">
+                <div class="help2container2">
+                    <div class="help2container3">
+                        <img src="img/terminal.png" draggable="false" alt="help 2 icon 1">
+                        <p class="translate" data-translate="home9"></p>
+                    </div>
+
+                    <div class="help2container3">
+                        <img src="img/abilityCard.png" draggable="false" alt="help 2 icon 2">
+                        <p class="translate" data-translate="home10"></p>
+                    </div>
+
+                    <div class="help2container3">
+                        <img src="img/chatbot.png" draggable="false" alt="help 2 icon 3">
+                        <p class="translate" data-translate="home11"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-navigation">
+                <button class="welcome-nav-button left-btn translate" data-translate="helpButtonBack" id="prevBtn2" onclick="navigate(-1, 1)"></button>
+                <button class="welcome-nav-button right-btn translate" data-translate="helpButtonNext" id="nextBtn2" onclick="navigate(1, 1)"></button>
+            </div>
+        </div>
+    
+        <!-- Help 3 -->
+        <div class="welcome-window" id="help3">
+            <span class="welcome-close-btn" onclick="closeWindow()">&times;</span>
+            <p style="margin-bottom: 0; font-weight: 600;">(3/4)</p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; width: 100%; margin-top: 10px; align-items: center; justify-content: center;">
+                <img src="img/help3.png" draggable="false" alt="help 3">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h1 class="translate" data-translate="help4" style="text-align: start; width: 100%; font-size: 4dvh;"></h1>
+                    <p class="translate" data-translate="help5" style="text-align: start; max-width: 450px; line-height: 1.2;"></p>
+                </div>
+            </div>
+            <div class="welcome-navigation">
+                <button class="welcome-nav-button left-btn translate" data-translate="helpButtonBack" id="prevBtn3" onclick="navigate(-1, 2)"></button>
+                <button class="welcome-nav-button right-btn translate" data-translate="helpButtonNext" id="nextBtn3" onclick="navigate(1, 2)"></button>
+            </div>
+        </div>
+        <div class="welcome-nav-deco"></div>
+    
+        <!-- Help 4 -->
+        <div class="welcome-window" id="help4">
+            <span class="welcome-close-btn" onclick="closeWindow()">&times;</span>
+            <p style="margin-bottom: 0; font-weight: 600;">(4/4)</p>
+            <h1 class="translate" data-translate="help6" style="font-size: 3.5dvh; line-height: 1.2; margin-top: 15px;"></h1>
+            <div class="help4container">
+                <div class="welcome-cv-download shadowedImageSmall">
+                    <a><img src="img/pdf.png" alt="PDF" class="pdf-icon" draggable="false"></a>
+                    <a class="translate" data-translate="otherCV"></a>
+                </div>
+                <p class="translate" data-translate="help7" style="max-width: 650px; line-height: 1.2;"></p>
+            </div>
+            <div class="welcome-navigation">
+                <button class="welcome-nav-button left-btn translate" data-translate="helpButtonBack" id="prevBtn6" onclick="navigate(-1, 3)"></button>
+                <button class="welcome-nav-button right-btn translate" data-translate="helpButtonClose" id="closeBtn" onclick="closeWindow()"></button>
+            </div>
+        </div>
+        <div class="welcome-cv-download-deco"></div>
+    </div>
 
     <!-- Content -->
     <div class="borderShadowOverlay"></div>
@@ -176,7 +277,7 @@
     </div>
     
     <!-- CV Download -->
-    <div class="cv-download whiteShadowSmall">
+    <div class="cv-download shadowedImageSmall">
         <a download><img src="img/pdf.png" alt="PDF" class="pdf-icon" draggable="false"></a>
         <a download class="translate" data-translate="otherCV"></a>
     </div>
@@ -187,6 +288,7 @@
             <img src="img/experiencefooterimage.png" alt="Footer Image" class="footer-image cursor-default" draggable="false">
         </div>
         <div class="footer-content">
+            <div class="welcome-footer-deco"></div>
             <!-- Imię i nazwisko oraz social media -->
             <div class="name-and-links">
                 <p class="name cursor-default shadowedImageSmall" title="Tego gościa nie skopiujesz" style="font-size: 7vh; font-family: 'Ballet', cursive; font-weight: 600;">Wiktor Gołąb</p>
@@ -213,6 +315,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/language.js" defer></script>
+    <script src="js/help.js"></script>
     <script>
         const backgroundImage = document.querySelector('.experienceBackground');
     

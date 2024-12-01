@@ -33,6 +33,37 @@ body {
     color: #ffffff !important;
 }
 
+.welcome-nav-button {
+    color: #6126cf !important;
+}
+
+/* Przyciski - Efekt najechania */
+.welcome-nav-button:hover {
+    color: #9b73e4 !important;
+}
+
+#closeBtn {
+    color: #6126cf !important;
+    border: 2.5px solid #6126cf !important;
+}
+
+#closeBtn:hover {
+    color: #9b73e4 !important;
+    border: 2.5px solid #9b73e4 !important;
+}
+
+.welcome-cv-download-deco {
+    background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+}
+
+.welcome-nav-deco {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)) !important;
+}
+
+.welcome-footer-deco {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) !important;
+}
+
 .discover-button {
     background-color: #201f22;
     color: #ffffff;

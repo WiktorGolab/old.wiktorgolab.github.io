@@ -79,6 +79,8 @@ header nav ul li:not(:last-child)::after {
     right: -18px; /* Przesunięcie na prawo */
     top: 50%; /* Wyśrodkowanie separatora */
     transform: translateY(-50%); /* Wyrównanie w pionie */
+    pointer-events: none;
+    user-select: none;
 }
 
 /* Responsywność */
@@ -214,4 +216,55 @@ nav {
     cursor: pointer;
     color: #000000; /* Kolor przycisku */
     border-radius: 50%;
+}
+
+.nav-help-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    height: 100%;
+    max-height: 88.59px;
+    bottom: 0;
+    left: 10px;
+}
+
+.nav-help {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(231, 231, 231);
+    background-color: #fafafa;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 3px solid rgb(231, 231, 231);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 40%;
+    cursor: pointer;
+    transition: transform 1s ease-out, color 1s ease-out, border 1s ease-out;
+    user-select: none;
+}
+
+.nav-help.notification {
+    animation: notify 1s ease-out forwards;
+}
+
+@keyframes notify {
+    0% {
+        color: #ea4759;
+        border: 3px solid #ea4759;
+        transform: scale(1.2);
+    }
+    100% {
+        color: rgb(231, 231, 231);
+        border: 3px solid rgb(231, 231, 231);
+    }
+}
+
+.nav-help:hover {
+    transform: scale(1.05);
 }

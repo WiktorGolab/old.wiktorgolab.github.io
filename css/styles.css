@@ -85,7 +85,7 @@ li {
     background-repeat: repeat;
     transform: rotate(25deg); /* Obrót kratki */
     transform-origin: center center;
-    z-index: 1000; /* Splash screen na wierzchu */
+    z-index: 2000; /* Splash screen na wierzchu */
     display: flex;
     opacity: 1;
     justify-content: center;
@@ -116,7 +116,7 @@ li {
     transform: translate(-50%, -50%); /* Przesunięcie o połowę szerokości i wysokości */
     display: flex; /* Umożliwia ułożenie kropek w wierszu */
     gap: 8px; /* Odstęp między kropkami */
-    z-index: 1001; /* Kropki nad splash screen */
+    z-index: 3001; /* Kropki nad splash screen */
     transition: opacity 0.5s ease-out;
     opacity: 1;
 }
@@ -242,6 +242,10 @@ li {
     position: relative;
     transform: scale(1.4);
     margin-right: 12px;
+}
+
+.pdf-icon {
+    user-select: none;
 }
 
 .cv-download a {

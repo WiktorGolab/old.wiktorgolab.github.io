@@ -143,6 +143,7 @@
     opacity: 0.4;
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     pointer-events: auto;
+    user-select: none;
 }
 
 /* Opcjonalnie usuń ostatni margines dla estetyki */
@@ -303,7 +304,6 @@
         transform: scale(0.9) translate(15%, 0);
     }
 }
-
 
 @media (max-width: 1715px) {
     .chatbot-container {

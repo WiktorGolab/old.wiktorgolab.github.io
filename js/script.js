@@ -83,4 +83,9 @@ function checkCvDownloadPosition() {
 // Dodajemy event listener dla scrolla
 if (window.innerWidth <= 839) {
     window.addEventListener("scroll", checkCvDownloadPosition);
+    
+    const cvDownload = document.querySelector(".cv-download");
+
+    cvDownload.style.opacity = "0";
+    cvDownload.style.pointerEvents = "none";
 }
