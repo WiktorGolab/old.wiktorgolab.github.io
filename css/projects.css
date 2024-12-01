@@ -101,7 +101,11 @@ body {
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-.yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button {
+.web-button img, .github-button img, .github-pages-button img {
+    user-select: none;
+}
+
+.yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button, .ng-button {
     width: 50px;
     font-size: 30px;
     border-radius: 50%;
@@ -129,6 +133,17 @@ body {
 
 .gd-button {
     background-color: #3e6fc9;
+}
+
+.ng-button {
+    background-color: #ffb50e;
+    height: 50px;
+}
+
+.ng-button img {
+    width: 70%;
+    transform: translateY(3px);
+    user-select: none;
 }
 
 .github-button {
@@ -647,4 +662,13 @@ h2 {
 
 section {
     z-index: 1;
+}
+
+.outsiderproject {
+    width: 100%;
+    height: 100%;
+    max-width: 70px;
+    padding: 20px;
+    user-select: none;
+    pointer-events: none;
 }

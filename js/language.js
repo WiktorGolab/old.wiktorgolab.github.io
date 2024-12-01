@@ -147,6 +147,10 @@ const translations = {
         projectsDermaExpert1 : "Stworzono kompleksową stronę internetową od podstaw, wykorzystując platformę WordPress, aby zapewnić nowoczesne i przyjazne dla użytkownika rozwiązanie. Proces obejmował projektowanie struktury i układu strony oraz implementację elementów wizualnych i treściowych, dostosowanych do specyfiki branży dermatologicznej.",
         projectsDermaExpert2 : "Skupiono się na zapewnieniu responsywności oraz intuicyjności interfejsu użytkownika.",
         outsiderproject : "Projekt Outsider",
+        outsiderproject1 : "Pod pseudonimem artystycznym zajmuję się produkcją muzyczną od ponad <strong>sześciu lat</strong>, wykorzystując środowiska <strong>DAW (Digital Audio Workstation)</strong>.",
+        outsiderproject2 : "Moje umiejętności obejmują dogłębną znajomość i biegłość w obsłudze wiodących narzędzi oraz wtyczek muzycznych, takich jak <strong>Xfer Serum</strong>, <strong>reFX Nexus</strong>, a także wielu innych narzędzi, które wspierają kreatywną produkcję dźwięku. W ramach mojej działalności tworzę i udostępniam <strong>profesjonalne presety</strong> i <strong>sample</strong>, które odzwierciedlają najnowsze trendy w muzyce elektronicznej.",
+        outsiderproject3 : "Moje portfolio obejmuje szeroki zakres prac, w tym <strong>oryginalne utwory</strong>, <strong>remix'y</strong>, <strong>edit'y</strong>, <strong>składanki</strong> oraz <strong>albumy</strong>, które zdobyły uznanie zarówno wśród słuchaczy, jak i innych twórców.",
+        outsiderproject4 : "Równolegle prowadzę działania na platformach społecznościowych, gdzie <strong>zarządzam swoimi stronami artystycznymi</strong>, angażując się w budowanie społeczności i promowanie swojej twórczości. Moja działalność łączy pasję do tworzenia muzyki z profesjonalizmem w zakresie produkcji i zarządzania wizerunkiem artystycznym.",
 
         experience: "Doświadczenie",
         experienceDescM3Group : "Projektowanie grafiki komputerowej, Praca nad rozwojem interfejsów użytkownika dla platformy e-commerce przy użyciu technologii WordPress Elementor oraz WP Bakery oraz innych wtyczek (tj. Social media stream, pop-up content, RSS Stream). Dbałość o responsywność stron. Zaprojektowanie aplikacji Windows, Linux, Android i iOS.",
@@ -182,7 +186,8 @@ const translations = {
         contactFormInvalidEmail : "Błędny zapis e-mail.",
 
         otherVideo : "Twoja przeglądarka nie obsługuje odtwarzania wideo.",
-        otherCV : "Pobierz CV"
+        otherCV : "Pobierz CV",
+        nameTitle: "Tego gościa nie skopiujesz"
     },
     en: {
         pageTitleHome : "Portfolio - Home",
@@ -332,6 +337,10 @@ const translations = {
         projectsDermaExpert1 : "A complex website was created from scratch, using the WordPress platform to provide a modern and user-friendly solution. The process included the design of the site's structure and layout, as well as the implementation of visual and content elements tailored to the dermatology industry.",
         projectsDermaExpert2 : "The focus was on ensuring responsiveness and an intuitive user interface.",
         outsiderproject : "Outsider Project",
+        outsiderproject1 : "Under an artistic pseudonym, I have been involved in music production for more than <strong>six years</strong>, using <strong>DAW (Digital Audio Workstation)</strong> environments.",
+        outsiderproject2 : "My skills include in-depth knowledge and mastery of leading tools and music plug-ins, such as <strong>Xfer Serum</strong>, <strong>reFX Nexus</strong>, as well as many other tools that support creative sound production. As part of my activity, I create and provide <strong>professional presets</strong> and <strong>samples</strong> that capture the latest trends in electronic music.",
+        outsiderproject3 : "My portfolio includes a wide range of work, including <strong>original songs</strong>, <strong>remixes</strong>, <strong>edits</strong>, <strong>compilations</strong> and <strong>albums</strong> that have gained respect from listeners and other artists alike.",
+        outsiderproject4 : "In addition, I am engaged in activities on social media platforms, where I <strong>manage my artist pages</strong>, involving myself in building communities and promoting my work. My business combines my passion for creating music with professionalism in production and management of artistic image.",
 
         experience: "Experience",
         experienceDescM3Group : "Designing computer graphics, Working on the development of user interfaces for e-commerce platform using WordPress Elementor and WP Bakery technologies and other plugins (such as Social media stream, pop-up content, RSS Stream). Taking care of responsive websites. Designing Windows, Linux, Android and iOS application.",
@@ -367,7 +376,8 @@ const translations = {
         contactFormInvalidEmail : "Incorrect e-mail notation.",
 
         otherVideo : "Your browser does not support video playback.",
-        otherCV : "Download CV"
+        otherCV : "Download CV",
+        nameTitle: "You can't copy this guy"
     }
 };
 
@@ -386,6 +396,7 @@ function setLanguage(lang) {
     const githubPagesButton = document.querySelectorAll(".github-pages-button");
     
     const buttonHomeAboutTitle = document.querySelectorAll(".homeButtonAbout");
+    const name = document.querySelectorAll(".name");
 
     const coolItemsConsole = document.querySelectorAll(".coolItemsConsole");
     const coolItemsCard = document.querySelectorAll(".coolItemsCard");
@@ -405,6 +416,9 @@ function setLanguage(lang) {
 
     buttonHomeAboutTitle.forEach(button => {
         button.title = translations[lang].buttonHomeAboutTitle; // Ustawienie tytułu dla każdego divu
+    });
+    name.forEach(p => {
+        p.title = translations[lang].nameTitle; // Ustawienie tytułu dla każdego divu
     });
 
     coolItemsConsole.forEach(Image => {
