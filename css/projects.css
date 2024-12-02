@@ -82,7 +82,7 @@ body {
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-.web-button, .yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button {
+.web-button, .yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button, .ig-button {
     background-color: rgb(79, 170, 67);
     color: #ffffff;
     padding: 10px;
@@ -98,6 +98,7 @@ body {
     text-decoration: none;
     margin-top: auto;
     border-radius: 5px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
@@ -105,7 +106,7 @@ body {
     user-select: none;
 }
 
-.yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button, .ng-button {
+.yt-button, .fb-button, .sc-button, .tt-button, .xt-button, .gd-button, .ng-button, .ig-button {
     width: 50px;
     font-size: 30px;
     border-radius: 50%;
@@ -139,11 +140,14 @@ body {
     background-color: #ffb50e;
     height: 50px;
 }
-
 .ng-button img {
     width: 70%;
     transform: translateY(3px);
     user-select: none;
+}
+
+.ig-button {
+    background-color: #C13584;
 }
 
 .github-button {
@@ -162,6 +166,7 @@ body {
     gap: 6px;
     text-decoration: none;
     border-radius: 5px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
@@ -177,6 +182,7 @@ body {
     justify-content: center;
     text-decoration: none;
     border-radius: 5px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
     transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
