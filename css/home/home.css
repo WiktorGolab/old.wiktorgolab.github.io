@@ -1,6 +1,7 @@
 * p::selection, * h1::selection, * h2::selection, * a::selection, * div::selection, * strong::selection {
     background-color: rgba(234, 71, 90, 1) !important;
     color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 1920px) {

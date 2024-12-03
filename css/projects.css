@@ -12,6 +12,7 @@
 * p::selection, * h2::selection, * a::selection, * div::selection, * li::selection, * strong::selection, * i::selection   {
     background-color: rgb(234, 223, 71) !important;
     color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 img, button {

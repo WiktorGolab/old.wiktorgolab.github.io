@@ -391,6 +391,7 @@ header nav ul li a:hover {
 * p::selection, * h2::selection, * a::selection, * div::selection, * label::selection {
     background-color: #4793ea !important;
     color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 img, button, textarea, input {

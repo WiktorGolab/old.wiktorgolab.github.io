@@ -9,6 +9,7 @@ body {
 * p::selection, * h2::selection, * h3::selection, * a::selection, * div::selection, * span::selection, * li::selection {
     background-color: #3d813d !important;
     color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 img, br {
