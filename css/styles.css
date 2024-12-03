@@ -17,6 +17,18 @@ body {
     width: 100vw !important;
 }
 
+html {
+    cursor: url('/img/mainCursor.cur'), auto;
+}
+
+html a {
+    cursor: url('/img/mainCursor2.cur'), auto;
+}
+
+img, button {
+    user-select: none;
+}
+
 .body2 {
     background-color: #ea4759;
     width: 100%;
@@ -198,8 +210,8 @@ li {
     height: 25px;
 }
 
-.cursor-default {
-    cursor: default;
+.cursor-help {
+    cursor: url('/img/mainCursor3.cur'), auto;
     user-select: none;
 }
 

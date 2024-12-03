@@ -2,6 +2,15 @@ body {
     background-color: black;
 }
 
+* p::selection, * h1::selection, * h2::selection, * a::selection, * div::selection, * li::selection, * strong::selection, * i::selection   {
+    background-color: #cf9237 !important;
+    color: whitesmoke !important;
+}
+
+img, button {
+    user-select: none;
+}
+
 .footer-content {
     background-color: #e2d2ad !important;
     z-index: 4 !important;

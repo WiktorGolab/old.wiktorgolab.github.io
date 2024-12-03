@@ -112,7 +112,7 @@ body {
     background-color: rgba(255, 255, 255, 0);
     font-weight: 700;
     border: none;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     font-size: 16px;
     padding: 10px 15px;
     user-select: none;
@@ -159,7 +159,7 @@ body {
     line-height: 1.7;
     border-radius: 50%;
     font-weight: bold;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     transition: color 0.1s ease-out, background-color 0.1s ease-out, box-shadow 0.1s ease-out;
     user-select: none;
 }
@@ -182,7 +182,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     font-weight: 500;
     font-size: 15px;
     font-family: "Outfit", sans-serif;

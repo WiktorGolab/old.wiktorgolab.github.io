@@ -4,6 +4,7 @@
     height: 100%;
     bottom: 0;
     transform: translateY(8px);
+    user-select: none;
     z-index: -1;
 }
 

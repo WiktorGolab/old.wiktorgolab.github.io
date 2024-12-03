@@ -6,6 +6,19 @@ body {
     overflow-x: hidden;
 }
 
+* p::selection, * h2::selection, * h3::selection, * a::selection, * div::selection, * span::selection, * li::selection {
+    background-color: #3d813d !important;
+    color: white !important;
+}
+
+img, br {
+    user-select: none;
+}
+
+ul a {
+    user-select: none;
+}
+
 header nav ul li:not(:last-child)::after {
     background-color: #3d813d !important;
 }

@@ -36,7 +36,8 @@ function help() {
         downloadcv.style.display = "none";
     }, 100);
     document.body.style.backgroundColor = "#7f7f7f";
-    document.body.style.overflow = "hidden";
+    document.body.style.overflowY = 'hidden'; // Włączenie scrollowania tylko w pionie
+    document.body.style.overflowX = 'hidden'; // Wyłączenie scrollowania w poziomie
     splash.style.zIndex = 3000;
     loadingDots.style.zIndex = 3001;
 
@@ -168,7 +169,6 @@ function checkDeco(window) {
         downloadcv.style.opacity = 0;
         downloadcv.style.pointerEvents = "none";
     }
-
 
     if (window === 2){
         downloadcv.style.display = "none";

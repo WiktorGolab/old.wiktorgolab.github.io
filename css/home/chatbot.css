@@ -1,4 +1,9 @@
 /* Stylizacja kontenera chatbota */
+* .chatbot-container textarea::selection {
+    background-color: rgb(0, 0, 0) !important;
+    color: white !important;
+}
+
 .chatbot-container {
     width: 900px;
     max-width: 100%;
@@ -57,7 +62,7 @@
     color: white;
     font-size: 14px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     font-family: 'Outfit';
     letter-spacing: 0.5px;
 }

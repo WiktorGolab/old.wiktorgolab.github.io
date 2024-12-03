@@ -268,6 +268,7 @@ textarea {
     border-radius: 10px 10px 0 0;
     padding: 5px 10px;
     display: flex;
+    user-select: none;
 }
 
 @media (max-width: 1439px) {
@@ -387,13 +388,22 @@ header nav ul li a:hover {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="%235f9ee7" stroke-width="1.5"><rect x="0" y="0" width="20" height="20" rx="0" ry="0"/></svg>') !important;
 }
 
+* p::selection, * h2::selection, * a::selection, * div::selection, * label::selection {
+    background-color: #4793ea !important;
+    color: white !important;
+}
+
+img, button, textarea, input {
+    user-select: none;
+}
+
 .welcome-nav-button {
     color: #4793ea !important;
     font-family: Arial !important;
     padding: 10px 15px !important;
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     text-align: center;
     align-items: flex-start;
     display: block;

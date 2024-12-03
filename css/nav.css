@@ -5,7 +5,7 @@ a.btn {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     font-weight: 700;
     display: flex;
     align-items: center; /* Wyśrodkowanie w osi pionowej */
@@ -137,7 +137,7 @@ header nav ul li:not(:last-child)::after {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     font-weight: 500;
     font-size: 15px;
     font-family: "Outfit", sans-serif;
@@ -213,7 +213,7 @@ nav {
     width: 52px;
     height: 52px;
     font-size: 24px; /* Rozmiar przycisku hamburgera */
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     color: #000000; /* Kolor przycisku */
     border-radius: 50%;
 }
@@ -244,7 +244,7 @@ nav {
     font-size: 20px;
     font-weight: 700;
     border-radius: 40%;
-    cursor: pointer;
+    cursor: url('/img/mainCursor2.cur'), auto;
     transition: transform 1s ease-out, color 1s ease-out, border 1s ease-out;
     user-select: none;
 }
