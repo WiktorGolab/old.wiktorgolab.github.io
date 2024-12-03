@@ -105,6 +105,7 @@ function getWindowId(step) {
 // Funkcja zamykająca powitanie
 function closeWindow() {
     const welcomeContainer = document.querySelector('.welcome-container');
+    const welcomeCvDownloadDeco = document.querySelector('.welcome-cv-download-deco');
     const downloadcv = document.querySelector('.cv-download');
     const helpButton = document.querySelector('.nav-help');
 
@@ -120,6 +121,7 @@ function closeWindow() {
     helpButton.classList.add('notification');
 
     checkDeco(3);
+    welcomeCvDownloadDeco.style.opacity = 0;
 
     const filename = window.location.pathname.split("/").pop();
 
@@ -221,3 +223,12 @@ function smoothScrollTo(targetPosition) {
 
     requestAnimationFrame(animateScroll);
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' || event.keyCode === 27) { // Obsługa starszych przeglądarek
+        const welcomeContainer = document.querySelector('.welcome-container');
+        if (welcomeContainer && welcomeContainer.style.display === 'flex') {
+            closeWindow();
+        }
+    }
+});
