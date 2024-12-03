@@ -82,6 +82,7 @@ li {
     font-family: 'Pacifico';
     left: 1vh;
     position: absolute;
+    z-index: 1;
 }
 
 /* Styl dla Splash Screen */
