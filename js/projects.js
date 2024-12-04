@@ -119,3 +119,21 @@ observer.observe(document.body, {
     childList: true,
     subtree: true,
 });
+
+function checkLinkAndExecute() {
+    const linkValue = localStorage.getItem('link'); // Pobiera wartość z Local Storage
+    const articleId = linkValue;
+    const modal = document.getElementById(`modal-${articleId}`);
+
+    if (modal) {
+        const modalContent = modal.querySelector('.modal-content');
+        modal.classList.add('active');
+        document.body.classList.add('no-scroll');
+        setTimeout(() => modalContent.classList.add('active'), 50); // Dodaj opóźnienie dla płynności
+        localStorage.setItem('link', "none");
+    } else {
+        return;
+    }
+}
+
+checkLinkAndExecute();

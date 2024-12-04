@@ -35,6 +35,8 @@ const translations = {
         introductionContent5 : "Stale poszerzam swoją wiedzę i podejmuję nowe wyzwania w świecie technologii i designu.",
         buttonHomeAbout : "Zobacz więcej",
         buttonHomeAboutTitle : "Poznaj mnie lepiej",
+        buttonHomeProjects : "Zobacz wszystkie projekty",
+        buttonHomeProjectsTitle : "Przejdź do strony z projektami",
         consoleCode1 : "class Kandydat {",
         consoleCode2 : "constructor(imię, umiejetności, doświadczenie) {",
         consoleCode3 : "this.imię = imię;",
@@ -79,6 +81,9 @@ const translations = {
         coolItemsChatbot : "Porozmawiaj ze mną!",
         chatbotSend : "Wyślij",
         chatbotTextarea : "Wpisz wiadomość...",
+        homeProjectInfo: "&lt;!-- Kategoria Projektu --&gt;",
+        homeProjectWebPage : "&lt;!-- Strona Internetowa --&gt;",
+        homeProjectWebGame : "&lt;!-- Gra Przeglądarkowa --&gt;",
 
         about: "O mnie",
         aboutToPutItSimply : "Mówiąc wprost",
@@ -123,7 +128,7 @@ const translations = {
         educzar : "Strona internetowa \"wizytówka\" stworzona na zlecenie:)",
         projectsEduczar1 : "Wdrożono kompletny proces tworzenia i administrowania stroną internetową z wykorzystaniem WordPress'a, dostosowując rozwiązania do potrzeb edukacyjnych i komunikacyjnych organizacji, przyjaznej zarówno dla oka dziecka, jak i rodzica.",
         projectsEduczar2 : "Aktualizacja treści przez ponad rok i wprowadzanie na bieżąco nowych postów.",
-        outsider : "Poznaj moją internetową twórczość",
+        outsider : "Poznaj moją internetową twórczość.",
         pong : "Moja interpretacja klasycznej gry Pong z 1972 roku wydana przez Atari.",
         projectsPong1 : "<strong>Pong</strong> – klasyczna już gra komputerowa będąca symulacją tenisa stołowego przy użyciu grafiki dwuwymiarowej. Celem rozgrywki jest pokonanie przeciwnika poprzez uzyskanie wyższego wyniku punktowego. Gra wydana została w 1972 roku przez Atari i jest jedną z najstarszych przeznaczonych na automaty.",
         projectsPong2 : "<i>Źródło: <a href=\"https://pl.wikipedia.org/wiki/Pong\" target=\"_blank\" style=\"color: #818181;\">https://pl.wikipedia.org/wiki/Pong</a></i>",
@@ -236,6 +241,8 @@ const translations = {
         introductionContent5 : "I’m always eager to expand my knowledge and take on new challenges in the world of technology and design.",
         buttonHomeAbout : "Read more",
         buttonHomeAboutTitle : "Get to know me better",
+        buttonHomeProjects : "See all projects",
+        buttonHomeProjectsTitle : "Go to the projects page",
         consoleCode1 : "class Candidate {",
         consoleCode2 : "constructor(name, skills, experience) {",
         consoleCode3 : "this.name = name;",
@@ -280,6 +287,9 @@ const translations = {
         coolItemsChatbot : "Talk with me!",
         chatbotSend : "Send",
         chatbotTextarea : "Type a message...",
+        homeProjectInfo: "&lt;!-- Project Category --&gt;",
+        homeProjectWebPage : "&lt;!-- Website --&gt;",
+        homeProjectWebGame : "&lt;!-- Browser Game --&gt;",
 
         about: "About me",
         aboutToPutItSimply : "To put it simply",
@@ -324,7 +334,7 @@ const translations = {
         educzar : "Website \"business card\" created on commission:)",
         projectsEduczar1 : "Carried out the overall process of creating and administering the website using WordPress, customizing solutions to meet the educational and communication needs of the organization, friendly to both the child and parent's eye.",
         projectsEduczar2 : "Updating content for over a year and introducing new posts on a regular basis.",
-        outsider : "Explore my online creations",
+        outsider : "Explore my online creations.",
         pong : "My interpretation of the 1972 classic game Pong released by Atari.",
         projectsPong1 : "<strong>Pong</strong> - a classic table tennis–themed twitch arcade sports video game, featuring simple two-dimensional graphics, manufactured by Atari and originally released on 29 November 1972. It is one of the earliest arcade video games.",
         projectsPong2 : "<i>Source: <a href=\"https://en.wikipedia.org/wiki/Pong\" target=\"_blank\" style=\"color: #818181;\">https://en.wikipedia.org/wiki/Pong</a></i>",
@@ -418,6 +428,7 @@ function setLanguage(lang) {
     const githubPagesButton = document.querySelectorAll(".github-pages-button");
     
     const buttonHomeAboutTitle = document.querySelectorAll(".homeButtonAbout");
+    const buttonHomeProjectsTitle = document.querySelectorAll(".homeButtonProjects");
     const name = document.querySelectorAll(".name");
 
     const coolItemsConsole = document.querySelectorAll(".coolItemsConsole");
@@ -438,6 +449,9 @@ function setLanguage(lang) {
 
     buttonHomeAboutTitle.forEach(button => {
         button.title = translations[lang].buttonHomeAboutTitle; // Ustawienie tytułu dla każdego divu
+    });
+    buttonHomeProjectsTitle.forEach(button => {
+        button.title = translations[lang].buttonHomeProjectsTitle; // Ustawienie tytułu dla każdego divu
     });
     name.forEach(p => {
         p.title = translations[lang].nameTitle; // Ustawienie tytułu dla każdego divu
