@@ -1,6 +1,6 @@
 Portfolio w trakcie budowy!
 
-# Wiktor Gołąb - Strona Portfolio
+# Strona Portfolio
 
 Witaj w repozytorium mojej osobistej strony portfolio! To miejsce, gdzie prezentuję swoje umiejętności, projekty i doświadczenia związane z programowaniem, tworzeniem stron internetowych i rozwijaniem kreatywnych rozwiązań.
 
