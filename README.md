@@ -33,9 +33,9 @@ Link do portfolio: [wiktorgolab.github.io](https://wiktorgolab.github.io)
 
 Projekt został stworzony przy użyciu następujących technologii:
 
-- **HTML5**
-- **CSS3**: W tym animacje, efekty wizualne i projektowanie responsywne.
-- **JavaScript (ES6+)**
+- **HTML**
+- **CSS**: W tym animacje, efekty wizualne i projektowanie responsywne.
+- **JavaScript**
 - **GitHub Pages**: Hosting strony
 - **Integracje z API**: W celu demonstracji potencjalnych aplikacji.
 
