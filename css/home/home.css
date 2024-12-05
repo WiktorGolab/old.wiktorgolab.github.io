@@ -368,6 +368,12 @@
     padding: 10px;
     width: 100%;
     max-width: 1600px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+* .homeProjectsDashedContainer p::selection, * .homeProjectsDashedContainer strong::selection, * .homeProjectsDashedContainer h1::selection {
+    background-color: #119385 !important;
+    color: white !important;
 }
 
 .homeProjectsMainContainer {
@@ -546,6 +552,16 @@
 .homeButtonProjects:hover {
     transform: translateY(-5px);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
-    border: 5px solid #ea4759;
-    color: #ea4759;
+    border: 5px solid #27b6a7;
+    color: #27b6a7;
+}
+
+.homeProjectsDashedContainerTitle {
+    color: white;
+    font-family: 'Astloch', system-ui;
+    font-size: 6.5vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-top: 15px;
+    margin-bottom: -30px;
+    font-weight: 700;
 }
