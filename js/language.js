@@ -28,11 +28,11 @@ const translations = {
         imWiktor : "Jestem Wiktor :)",
         introductionWindowTitle : "wstęp.md",
         introductionTitle : "Pozwól, że się przedstawię...",
-        introductionContent1 : "Jestem studentem trzeciego roku na Uniwersytecie Adama Mickiewicza w Poznaniu, z pasją do projektowania stron internetowych, tworzenia aplikacji i sztucznej inteligencji.",
-        introductionContent2 : "Moją studencką podróż uzupełnia praktyczne doświadczenie zdobyte podczas staży i pracy w branży technologicznej. Podczas stażu w M3 Group pracowałem jako projektant stron internetowych (WordPress) i projektant aplikacji przy użyciu FlutterFlow, gdzie doskonaliłem swoje umiejętności w budowaniu przyjaznych dla użytkownika i responsywnych rozwiązań internetowych.",
-        introductionContent3 : "Obecnie pełnię funkcję administratora i projektanta stron internetowych dla EDU-CZAR i DermaExpert, zarządzając i projektując ich strony internetowe w celu poprawy komfortu użytkowania i funkcjonalności.",
-        introductionContent4 : "Poza pracą zawodową, osobiście interesuję się sztuczną inteligencją i od kilku lat eksploruję narzędzia AI. Lubię również tworzyć materiały cyfrowe, wykorzystując narzędzia takie jak FL Studio, Adobe Premiere Pro i GIMP do realizacji kreatywnych idei.",
-        introductionContent5 : "Stale poszerzam swoją wiedzę i podejmuję nowe wyzwania w świecie technologii i designu.",
+        introductionContent1 : "Jestem <strong>studentem trzeciego roku na Uniwersytecie Adama Mickiewicza w Poznaniu</strong>, z pasją do projektowania stron internetowych, tworzenia aplikacji i sztucznej inteligencji.",
+        introductionContent2 : "Moją studencką podróż uzupełnia praktyczne doświadczenie zdobyte podczas staży i pracy w branży technologicznej. Podczas stażu w <a class='homeProjectButton6'>M3 Group</a> pracowałem jako <strong>projektant stron internetowych</strong> (WordPress) i <strong>projektant aplikacji</strong> przy użyciu FlutterFlow, gdzie doskonaliłem swoje umiejętności w budowaniu przyjaznych dla użytkownika i responsywnych rozwiązań internetowych.",
+        introductionContent3 : "Obecnie pełnię funkcję <strong>administratora</strong> i <strong>projektanta stron internetowych</strong> dla <a class='homeProjectButton4'>EDU-CZAR</a> i <a class='homeProjectButton5'>DermaExpert</a>, zarządzając i projektując ich strony internetowe w celu poprawy komfortu użytkowania i funkcjonalności.",
+        introductionContent4 : "Poza pracą zawodową, osobiście interesuję się <strong>sztuczną inteligencją</strong> i od kilku lat eksploruję narzędzia AI. Lubię również tworzyć <strong>materiały cyfrowe</strong>, wykorzystując narzędzia takie jak FL Studio, Adobe Premiere Pro i GIMP do realizacji kreatywnych idei.",
+        introductionContent5 : "Stale poszerzam swoją wiedzę i <strong>podejmuję nowe wyzwania w świecie technologii i designu</strong>.",
         buttonHomeAbout : "Zobacz więcej",
         buttonHomeAboutTitle : "Poznaj mnie lepiej",
         buttonHomeProjects : "Zobacz wszystkie projekty",
@@ -235,11 +235,11 @@ const translations = {
         imWiktor : "I'm Wiktor :)",
         introductionWindowTitle : "introduction.md",
         introductionTitle : "Let me introduce myself...",
-        introductionContent1 : "I am a third-year student at Adam Mickiewicz University in Poznań, with a passion for web design, application development and artificial intelligence.",
-        introductionContent2 : "My academic journey is complemented by hands-on experience gained through internships and professional roles in the tech industry. During my internship at M3 Group, I worked as a Web Designer (WordPress) and Application Designer using FlutterFlow, where I honed my skills in building user-friendly and responsive web solutions.",
-        introductionContent3 : "Currently, I serve as a Website Administrator & Designer for EDU-CZAR and DermaExpert, managing and designing their websites to enhance user experience and functionality.",
-        introductionContent4 : "Beyond my professional work, I have a strong personal interest in artificial intelligence and have been exploring AI tools for several years. I also enjoy creating digital content, utilizing tools like FL Studio, Adobe Premiere Pro, and GIMP to bring creative ideas to life.",
-        introductionContent5 : "I’m always eager to expand my knowledge and take on new challenges in the world of technology and design.",
+        introductionContent1 : "I am a <strong>third-year student at Adam Mickiewicz University in Poznań</strong>, with a passion for web design, application development and artificial intelligence.",
+        introductionContent2 : "My academic journey is complemented by hands-on experience gained through internships and professional roles in the tech industry. During my internship at <a class='homeProjectButton6'>M3 Group</a>, I worked as a <strong>Web Designer</strong> (WordPress) and <strong>Application Designer</strong> using FlutterFlow, where I honed my skills in building user-friendly and responsive web solutions.",
+        introductionContent3 : "Currently, I serve as a Website <strong>Administrator</strong> & <strong>Designer</strong> for <a class='homeProjectButton4'>EDU-CZAR</a> and <a class='homeProjectButton5'>DermaExpert</a>, managing and designing their websites to enhance user experience and functionality.",
+        introductionContent4 : "Beyond my professional work, I have a strong personal interest in <strong>artificial intelligence</strong> and have been exploring AI tools for several years. I also enjoy creating <strong>digital content</strong>, utilizing tools like FL Studio, Adobe Premiere Pro, and GIMP to bring creative ideas to life.",
+        introductionContent5 : "I’m always eager to expand my knowledge and <strong>take on new challenges in the world of technology and design</strong>.",
         buttonHomeAbout : "Read more",
         buttonHomeAboutTitle : "Get to know me better",
         buttonHomeProjects : "See all projects",
@@ -488,6 +488,14 @@ function setLanguage(lang) {
     });
     
     localStorage.setItem("language", lang);
+
+    const homeProjectButton4 = document.querySelector('.homeProjectButton4');
+    const homeProjectButton5 = document.querySelector('.homeProjectButton5');
+    const homeProjectButton6 = document.querySelector('.homeProjectButton6');
+
+    homeProjectButton4?.addEventListener('click', goToEduczar);
+    homeProjectButton5?.addEventListener('click', goToDermaExpert);
+    homeProjectButton6?.addEventListener('click', goToM3Group);
 }
 
 function updateTranslateAttribute() {
@@ -509,3 +517,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = localStorage.getItem("language") || "pl";
     setLanguage(savedLanguage);
 });
+
+function goToDermaExpert() {
+    localStorage.setItem('link', 'dermaexpert'); // Zapis do Local Storage
+    window.location.href = 'projects2.html'; // Przekierowanie
+}
+
+function goToM3Group() {
+    localStorage.setItem('link', 'eksero24'); // Zapis do Local Storage
+    window.location.href = 'projects.html'; // Przekierowanie
+}
+
+function goToEduczar() {
+    localStorage.setItem('link', 'educzar'); // Zapis do Local Storage
+    window.location.href = 'projects.html'; // Przekierowanie
+}

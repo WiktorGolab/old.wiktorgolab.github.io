@@ -464,6 +464,16 @@
     transition: transform 0.2s ease-out, background-color 0.2s ease-out;
 }
 
+.homeProjectButton4, .homeProjectButton5, .homeProjectButton6 {
+    color: #ea475a;
+    font-weight: 700;
+    transition: all 0.1s ease-out;
+}
+
+.homeProjectButton4:hover, .homeProjectButton5:hover, .homeProjectButton6:hover {
+    color: #ff9fab;
+}
+
 .homeProjectButton1:hover, .homeProjectButton2:hover, .homeProjectButton3:hover {
     transform: translateY(-8px);
     background-color: #2bac9f;
