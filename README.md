@@ -1,14 +1,11 @@
-# Portfolio w fazie budowy
+Portfolio w trakcie budowy!
+
 # Wiktor Gołąb - Strona Portfolio
 
 Witaj w repozytorium mojej osobistej strony portfolio! To miejsce, gdzie prezentuję swoje umiejętności, projekty i doświadczenia związane z programowaniem, tworzeniem stron internetowych i rozwijaniem kreatywnych rozwiązań.
 
-## Spis treści
-
-- [Opis projektu](#opis-projektu)
-- [Funkcjonalności](#funkcjonalności)
-- [Technologie](#technologie)
-- [Kontakt](#kontakt)
+![Strona główna](img/gallery/pic6.png)
+###### Strona główna. Rozdzielczość ekranu: 2560x1440
 
 ---
 
@@ -18,16 +15,12 @@ Strona portfolio to narzędzie pozwalające zaprezentować moje umiejętności i
 
 Link do portfolio: [wiktorgolab.github.io](https://wiktorgolab.github.io)
 
----
-
 ## Funkcjonalności
 
 - **Responsywność**: Strona działa płynnie na różnych urządzeniach i rozdzielczościach.
 - **Sekcja projektów**: Prezentacja moich najważniejszych projektów z odnośnikami do ich kodu źródłowego lub wersji live.
 - **Technologie i narzędzia**: Lista używanych przeze mnie frameworków, bibliotek i języków programowania.
 - **Kontakt**: Formularz kontaktowy do łatwego nawiązania współpracy.
-
----
 
 ## Technologie
 
