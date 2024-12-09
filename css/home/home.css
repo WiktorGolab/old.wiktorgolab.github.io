@@ -1,4 +1,4 @@
-* p::selection, * h1::selection, * h2::selection, * a::selection, * div::selection, * strong::selection {
+p::selection, * h1::selection, * h2::selection, * a::selection, * div::selection, * strong::selection {
     background-color: #ea475a !important;
     color: white !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -116,6 +116,76 @@
 .white-content::-moz-selection {
     background-color: #ea4759 !important;
     color: white !important;
+}
+
+.content2 {
+    position: relative;
+    border-top: 5px groove white;
+    border-bottom: 5px ridge white;
+    background-image: url('/img/content2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Wyśrodkowanie elementów poziomo */
+    align-items: center; /* Wyśrodkowanie elementów pionowo */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+.content2Item1 p::selection, .content2Item1 h2::selection, .homeExperience2WindowTitle p::selection, .content2Item2 h2::selection, .content2Item2 code::selection {
+    background-color: black !important;
+    color: white !important;
+}
+
+.content2Item1 p::-moz-selection, .content2Item1 h2::-moz-selection, .homeExperience2WindowTitle p::-moz-selection, .content2Item2 h2::-moz-selection, .content2Item2 code::-moz-selection {
+    background-color: black !important;
+    color: white !important;
+}
+
+* br::selection, * br::-moz-selection {
+    user-select: none !important;
+}
+
+.content2Item1 {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    background-image: url('/img/homeExperienceBackground1.jpg');
+    background-size: cover; /* Upewnia się, że obraz wypełni cały div */
+    background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
+    background-position: left; /* Wyrównanie obrazu w środku */
+    border-radius: 8px;
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content2Item2 {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    background-image: url('/img/homeExperienceBackground2.jpg');
+    background-size: cover; /* Upewnia się, że obraz wypełni cały div */
+    background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
+    background-position: left; /* Wyrównanie obrazu w środku */
+    border-radius: 8px;
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .coolItemsSpace {
@@ -345,7 +415,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 20px;
+    padding: 15px;
     margin-top: 150px;
 }
 
@@ -430,7 +500,7 @@
     align-items: start;
     justify-content: center;
     text-align: start;
-    max-width: 740px;
+    max-width: 600px;
     min-height: 216px;
     padding-bottom: 15px;
     border-bottom: 3px solid #f5f5f5;
@@ -506,7 +576,7 @@
     display: flex;
     background-color: black;
     border: 3px dashed transparent;
-    border-image: linear-gradient(to right, rgb(111, 177, 73) 70%, #2ac4b4 30%) 1;
+    border-image: linear-gradient(to right, rgb(111, 177, 73) 70%, #ffffff 30%) 1;
     color: rgb(111, 177, 73);
     padding: 15px;
     font-family: "VT323", monospace;
@@ -574,4 +644,67 @@
     margin-top: 15px;
     margin-bottom: -30px;
     font-weight: 700;
+}
+
+.homeButtonExperience {
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border: 5px solid #f5f5f5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: url('/img/mainCursor2.cur'), auto;
+    font-size: 16px;
+    font-weight: 700;
+    user-select: none;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out, color 0.3s ease-out;
+}
+
+.homeButtonExperience:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
+    border: 5px solid #adadad;
+    color: #adadad;
+}
+
+.content2Item2code {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.content2Item2code p {
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.content2Item2codeBlock {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+* .content2Item2codeBlock p::selection {
+    background-color: white !important;
+    color: black !important;
+}
+
+* .content2Item2codeBlock p::-moz-selection {
+    background-color: white !important;
+    color: black !important;
 }
