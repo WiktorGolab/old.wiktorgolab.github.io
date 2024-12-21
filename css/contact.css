@@ -6,17 +6,29 @@
     letter-spacing: 0.5px;
     margin-bottom: -500px;
     visibility: visible;
+    z-index: 1;
+    position: relative;
 }
 
-@media (max-width: 2050px) {
+@media (max-width: 1919px) {
     .contactContent {
-        margin-bottom: 0;
+        margin-bottom: -400px;
+    }
+}
+
+@media (max-width: 1439px) {
+    .contactContent {
+        margin-bottom: -200px;
     }
 }
 
 @media (max-width: 1850px) {
     .xp-window {
         margin-top: 15vh;
+    }
+
+    .contactContent {
+        transform: translateY(0px) !important;
     }
 }
 
@@ -101,6 +113,8 @@
     font-size: 12px;
     color: #333;
     cursor: url('/img/cursor.cur'), auto;
+    z-index: 1 !important;
+    position: relative;
 }
 
 button {
@@ -232,7 +246,7 @@ textarea {
     background-color: #d1d1d15e;
     position: absolute;
     box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.2);
-    z-index: -1;
+    z-index: -1 !important;
 }
 
 .xp-deco-window1, .xp-deco-window2 {
@@ -323,7 +337,7 @@ textarea {
 
 @media (max-width: 1440px) {
     .contactContent {
-        transform: scale(0.8);
+        transform: scale(0.8) translateY(-110px);
     }
 }
 
@@ -349,6 +363,7 @@ textarea {
 
 .footer-content {
     background-color: #1a4475 !important;
+    z-index: 0 !important;
 }
 
 .footer-birds {
@@ -447,4 +462,13 @@ img, button, textarea, input {
     top: 100px;
     width: 100%;
     opacity: 0.85;
+}
+
+.footerimg {
+    z-index: 0 !important;
+    position: relative !important;
+}
+
+.title {
+    z-index: 2 !important;
 }
