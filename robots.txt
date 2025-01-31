@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /js/
+Allow: /index.html
+Sitemap: https://wiktorgolab.github.io/sitemap.xml
