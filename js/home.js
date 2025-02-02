@@ -10,17 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Funkcja przenosząca na stronę i zapisująca do Local Storage
         function goToPong() {
             localStorage.setItem('link', 'pong'); // Zapis do Local Storage
-            window.location.href = 'projects.html'; // Przekierowanie
+            window.location.href = 'projects'; // Przekierowanie
         }
 
         function goToEksero24() {
             localStorage.setItem('link', 'eksero24'); // Zapis do Local Storage
-            window.location.href = 'projects.html'; // Przekierowanie
+            window.location.href = 'projects'; // Przekierowanie
         }
 
         function goToOutsider() {
             localStorage.setItem('link', 'outsider'); // Zapis do Local Storage
-            window.location.href = 'projects2.html'; // Przekierowanie
+            window.location.href = 'projects2'; // Przekierowanie
         }
 
         // Dodanie nasłuchiwania na kliknięcia
