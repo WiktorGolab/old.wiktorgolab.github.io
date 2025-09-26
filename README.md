@@ -13,7 +13,7 @@ Witaj w repozytorium mojej osobistej strony portfolio! To miejsce, gdzie prezent
 
 Strona portfolio to narzędzie pozwalające zaprezentować moje umiejętności i dotychczasowe prace. Została zaprojektowana z myślą o nowoczesnym designie, funkcjonalności i łatwej nawigacji. 
 
-Link do portfolio: [wiktorgolab.github.io](https://wiktorgolab.github.io)
+Link do portfolio: https://wiktorgolab.github.io/old.wiktorgolab.github.io/
 
 ## Funkcjonalności
 
