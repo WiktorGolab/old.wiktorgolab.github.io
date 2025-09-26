@@ -1,4 +1,4 @@
-Portfolio w trakcie budowy!
+Stara strona portfolio
 
 # Strona Portfolio
 
